@@ -220,9 +220,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(72, 140);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.Size = new System.Drawing.Size(27, 13);
             this.label8.TabIndex = 9;
-            this.label8.Text = "label8";
+            this.label8.Text = "jet 1";
             // 
             // pictureBox8
             // 
