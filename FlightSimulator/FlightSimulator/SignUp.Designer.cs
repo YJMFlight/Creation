@@ -170,6 +170,7 @@
             this.btnSave.TabIndex = 27;
             this.btnSave.Text = "Save Data";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnEnter
             // 
@@ -177,8 +178,9 @@
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(141, 37);
             this.btnEnter.TabIndex = 28;
-            this.btnEnter.Text = "Enter";
+            this.btnEnter.Text = "Enter Main";
             this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // btnBack
             // 
@@ -188,6 +190,7 @@
             this.btnBack.TabIndex = 29;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnTest
             // 
@@ -197,6 +200,7 @@
             this.btnTest.TabIndex = 30;
             this.btnTest.Text = "Test";
             this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
             // SignUp
             // 

@@ -663,7 +663,7 @@
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(735, 507);
+            this.splitter1.Size = new System.Drawing.Size(641, 507);
             this.splitter1.TabIndex = 5;
             this.splitter1.TabStop = false;
             // 

@@ -9,6 +9,11 @@ namespace FlightSimulator
     class Users
     {
         private string userName;
+        private string age;
+        private string id;
+        private string rank;
+        private string surname;
+
 
         public string UserName
         {
@@ -24,10 +29,19 @@ namespace FlightSimulator
             set { password = value; }
         }
 
-        public Users(string username, string ppassword)
+        public string Age { get => age; set => age = value; }
+        public string Id { get => id; set => id = value; }
+        public string Rank { get => rank; set => rank = value; }
+        public string Surname { get => surname; set => surname = value; }
+
+        public Users(string username, string ppassword , string id, string rank ,string surname , string age)
         {
             this.userName = username;
             this.password = ppassword;
+            this.age = age;
+            this.id = id;
+            this.rank = rank;
+            this.surname = surname;
         }
     }
 }

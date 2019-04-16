@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FlightSimulator
 {
-    public partial class Login : Form
+    public partial class TestLogin : Form
     {
-        public Login()
+        public TestLogin()
         {
             InitializeComponent();
         }
@@ -40,62 +40,24 @@ namespace FlightSimulator
 
             if (valid)
             {
-                MessageBox.Show("Welcome : " + ussername,"WELCOMEE!!!");
-                Main_Simulator_ main = new Main_Simulator_();
-                main.Show();
-                this.Hide();
+                MessageBox.Show("Welcome : " + ussername, "WELCOMEE!!!");
+               
             }
             else
             {
-                MessageBox.Show("Incorrect user credentials","ERROR!!");
+                MessageBox.Show("Incorrect user credentials", "ERROR!!");
                 txtPassword.Clear();
                 txtUsername.Clear();
                 txtUsername.Focus();
             }
         }
 
-        private void lblSignup_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             SignUp signUp = new SignUp();
             signUp.Show();
             this.Hide();
         }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            forgotton_Password forgotton_ = new forgotton_Password();
-            forgotton_.Show();
-            this.Hide();
-        }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
+    
 }

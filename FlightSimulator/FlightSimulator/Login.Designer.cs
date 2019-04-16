@@ -49,6 +49,7 @@
             this.label4.Size = new System.Drawing.Size(92, 13);
             this.label4.TabIndex = 17;
             this.label4.Text = "Forgot Password..";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // lblSignup
             // 
@@ -58,6 +59,7 @@
             this.lblSignup.Size = new System.Drawing.Size(52, 13);
             this.lblSignup.TabIndex = 16;
             this.lblSignup.Text = "Sign up...";
+            this.lblSignup.Click += new System.EventHandler(this.lblSignup_Click);
             // 
             // btnEnter
             // 
@@ -67,6 +69,7 @@
             this.btnEnter.TabIndex = 15;
             this.btnEnter.Text = "Enter...";
             this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // progressBar1
             // 
@@ -74,6 +77,7 @@
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(584, 23);
             this.progressBar1.TabIndex = 14;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // txtPassword
             // 
@@ -81,6 +85,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(109, 20);
             this.txtPassword.TabIndex = 13;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // txtUsername
             // 
@@ -88,6 +93,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(109, 20);
             this.txtUsername.TabIndex = 12;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // label3
             // 
@@ -97,6 +103,7 @@
             this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "Password :";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -106,6 +113,7 @@
             this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Username : ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel1
             // 
@@ -114,6 +122,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(606, 100);
             this.panel1.TabIndex = 9;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 

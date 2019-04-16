@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authentiction Handler.cs" />
     <Compile Include="forgotton Password.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +77,12 @@
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="TargetDescription.cs" />
+    <Compile Include="TestLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestLogin.Designer.cs">
+      <DependentUpon>TestLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users.cs" />
     <EmbeddedResource Include="forgotton Password.resx">
       <DependentUpon>forgotton Password.cs</DependentUpon>
@@ -99,6 +106,9 @@
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TestLogin.resx">
+      <DependentUpon>TestLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -114,6 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="france-physical-map.jpg" />
+    <Content Include="Resources\AuthrnticateUserFile.txt" />
     <None Include="Resources\france-physical-map.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
