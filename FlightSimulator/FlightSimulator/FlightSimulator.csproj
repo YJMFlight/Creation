@@ -70,6 +70,11 @@
     <Compile Include="Obstacles.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,14 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +125,13 @@
   <ItemGroup>
     <Content Include="france-physical-map.jpg" />
     <Content Include="Resources\AuthrnticateUserFile.txt" />
+    <None Include="Resources\Webp.net-resizeimage %282%29.png" />
+    <None Include="Resources\PNGPIX-COM-Military-Jet-PNG-Transparent-Image.png" />
+    <None Include="Resources\PNGPIX-COM-Military-Jet-PNG-Transparent-Image1.png" />
+    <Content Include="Resources\political-map-of-jutai-physical-outside.jpg" />
+    <None Include="Resources\Webp.net-resizeimage %281%29.png" />
+    <None Include="Resources\Webp.net-resizeimage.png" />
+    <None Include="Resources\political-map-of-jutai-physical-outside1.jpg" />
     <None Include="Resources\france-physical-map.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

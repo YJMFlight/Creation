@@ -19,7 +19,7 @@ namespace FlightSimulator
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            string path = @"C:\Users\Mphiwa\source\offline rough work\YJMFlight\Creation\FlightSimulator\FlightSimulator\Resources\AuthrnticateUserFile.txt";
+            /*string path = "AuthenticateUserFile.txt";
             string pass = txtPassword.Text;
             string ussername = txtUsername.Text;
             bool valid = false;
@@ -39,19 +39,19 @@ namespace FlightSimulator
             }
 
             if (valid)
-            {
-                MessageBox.Show("Welcome : " + ussername,"WELCOMEE!!!");
+            {*/
+                MessageBox.Show("Welcome : ","WELCOMEE!!!");
                 Main_Simulator_ main = new Main_Simulator_();
                 main.Show();
                 this.Hide();
-            }
+         /*   }
             else
             {
                 MessageBox.Show("Incorrect user credentials","ERROR!!");
                 txtPassword.Clear();
                 txtUsername.Clear();
                 txtUsername.Focus();
-            }
+            }*/
         }
 
         private void lblSignup_Click(object sender, EventArgs e)
