@@ -19,6 +19,8 @@ namespace FlightSimulator
 
         }
 
+        private Point MouseDownLocation;
+
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
@@ -35,6 +37,34 @@ namespace FlightSimulator
         }
 
         int x, y = 0;
+
+        private void Main_Simulator__Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                MouseDownLocation = e.Location;
+            }
+
+        }
+
+        private void pictureBox4_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBox4.Left = e.X + pictureBox4.Left - MouseDownLocation.X;
+                pictureBox4.Top = e.Y + pictureBox4.Top - MouseDownLocation.Y;
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
 
         protected override void OnMouseMove(MouseEventArgs e)
         {
