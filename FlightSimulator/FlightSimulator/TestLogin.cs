@@ -58,6 +58,11 @@ namespace FlightSimulator
             signUp.Show();
             this.Hide();
         }
+
+        private void TestLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
