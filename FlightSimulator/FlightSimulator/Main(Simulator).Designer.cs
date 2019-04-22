@@ -36,33 +36,6 @@
             this.Location1 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.txtJetAltitude = new System.Windows.Forms.TextBox();
-            this.txtFuelLeft = new System.Windows.Forms.TextBox();
-            this.txtCargoWeight = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.Y_obstical4 = new System.Windows.Forms.TextBox();
-            this.X_obstical4 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.Y_obstical3 = new System.Windows.Forms.TextBox();
-            this.X_obstical3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.Y_obstical2 = new System.Windows.Forms.TextBox();
-            this.X_obstical2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Y_obstical1 = new System.Windows.Forms.TextBox();
-            this.X_Obsticle1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -114,13 +87,16 @@
             this.picShoot2 = new System.Windows.Forms.PictureBox();
             this.picShoot5 = new System.Windows.Forms.PictureBox();
             this.timeShoot1 = new System.Windows.Forms.Timer(this.components);
+            this.button3 = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.txtJetAltitude = new System.Windows.Forms.TextBox();
+            this.txtFuelLeft = new System.Windows.Forms.TextBox();
+            this.txtCargoWeight = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picPlaneMap)).BeginInit();
             this.tabPage4.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -145,13 +121,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.picShoot3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picShoot2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picShoot5)).BeginInit();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // picPlaneMap
             // 
             this.picPlaneMap.BackColor = System.Drawing.Color.MediumBlue;
             this.picPlaneMap.Location = new System.Drawing.Point(606, 550);
-            this.picPlaneMap.Margin = new System.Windows.Forms.Padding(2);
+            this.picPlaneMap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picPlaneMap.Name = "picPlaneMap";
             this.picPlaneMap.Size = new System.Drawing.Size(14, 15);
             this.picPlaneMap.TabIndex = 7;
@@ -204,258 +181,12 @@
             // 
             this.tabPage4.BackColor = System.Drawing.Color.DarkSlateGray;
             this.tabPage4.Controls.Add(this.groupBox7);
-            this.tabPage4.Controls.Add(this.groupBox5);
-            this.tabPage4.Controls.Add(this.groupBox4);
-            this.tabPage4.Controls.Add(this.groupBox3);
-            this.tabPage4.Controls.Add(this.groupBox1);
+            this.tabPage4.Controls.Add(this.button3);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(420, 800);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Constraints";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.txtJetAltitude);
-            this.groupBox7.Controls.Add(this.txtFuelLeft);
-            this.groupBox7.Controls.Add(this.txtCargoWeight);
-            this.groupBox7.Controls.Add(this.label23);
-            this.groupBox7.Controls.Add(this.label18);
-            this.groupBox7.Controls.Add(this.label16);
-            this.groupBox7.Location = new System.Drawing.Point(40, 469);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(331, 129);
-            this.groupBox7.TabIndex = 12;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Jet Constraints";
-            // 
-            // txtJetAltitude
-            // 
-            this.txtJetAltitude.Location = new System.Drawing.Point(97, 94);
-            this.txtJetAltitude.Name = "txtJetAltitude";
-            this.txtJetAltitude.Size = new System.Drawing.Size(99, 20);
-            this.txtJetAltitude.TabIndex = 5;
-            // 
-            // txtFuelLeft
-            // 
-            this.txtFuelLeft.Location = new System.Drawing.Point(97, 62);
-            this.txtFuelLeft.Name = "txtFuelLeft";
-            this.txtFuelLeft.Size = new System.Drawing.Size(99, 20);
-            this.txtFuelLeft.TabIndex = 4;
-            // 
-            // txtCargoWeight
-            // 
-            this.txtCargoWeight.Location = new System.Drawing.Point(98, 24);
-            this.txtCargoWeight.Name = "txtCargoWeight";
-            this.txtCargoWeight.Size = new System.Drawing.Size(99, 20);
-            this.txtCargoWeight.TabIndex = 3;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(11, 62);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(75, 13);
-            this.label23.TabIndex = 2;
-            this.label23.Text = "Amount of fuel";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(20, 97);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(42, 13);
-            this.label18.TabIndex = 1;
-            this.label18.Text = "Altitude";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(14, 24);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(72, 13);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Cargo Weight";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.Y_obstical4);
-            this.groupBox5.Controls.Add(this.X_obstical4);
-            this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Controls.Add(this.label15);
-            this.groupBox5.Location = new System.Drawing.Point(40, 366);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(331, 96);
-            this.groupBox5.TabIndex = 11;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Coordinates of obstacle 4";
-            // 
-            // Y_obstical4
-            // 
-            this.Y_obstical4.Location = new System.Drawing.Point(97, 54);
-            this.Y_obstical4.Name = "Y_obstical4";
-            this.Y_obstical4.Size = new System.Drawing.Size(100, 20);
-            this.Y_obstical4.TabIndex = 7;
-            // 
-            // X_obstical4
-            // 
-            this.X_obstical4.Location = new System.Drawing.Point(97, 24);
-            this.X_obstical4.Name = "X_obstical4";
-            this.X_obstical4.Size = new System.Drawing.Size(100, 20);
-            this.X_obstical4.TabIndex = 6;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 57);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 13);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Y coordinate :";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(24, 27);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(73, 13);
-            this.label15.TabIndex = 4;
-            this.label15.Text = "X coordinate :";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.Y_obstical3);
-            this.groupBox4.Controls.Add(this.X_obstical3);
-            this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Location = new System.Drawing.Point(40, 243);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(331, 96);
-            this.groupBox4.TabIndex = 5;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Coordinates of obstacle 3";
-            // 
-            // Y_obstical3
-            // 
-            this.Y_obstical3.Location = new System.Drawing.Point(97, 58);
-            this.Y_obstical3.Name = "Y_obstical3";
-            this.Y_obstical3.Size = new System.Drawing.Size(100, 20);
-            this.Y_obstical3.TabIndex = 7;
-            // 
-            // X_obstical3
-            // 
-            this.X_obstical3.Location = new System.Drawing.Point(97, 28);
-            this.X_obstical3.Name = "X_obstical3";
-            this.X_obstical3.Size = new System.Drawing.Size(100, 20);
-            this.X_obstical3.TabIndex = 6;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 61);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Y coordinate :";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(24, 31);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "X coordinate :";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.Y_obstical2);
-            this.groupBox3.Controls.Add(this.X_obstical2);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(40, 132);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(331, 96);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Coordinates of obstacle 2";
-            // 
-            // Y_obstical2
-            // 
-            this.Y_obstical2.Location = new System.Drawing.Point(97, 55);
-            this.Y_obstical2.Name = "Y_obstical2";
-            this.Y_obstical2.Size = new System.Drawing.Size(100, 20);
-            this.Y_obstical2.TabIndex = 7;
-            // 
-            // X_obstical2
-            // 
-            this.X_obstical2.Location = new System.Drawing.Point(97, 25);
-            this.X_obstical2.Name = "X_obstical2";
-            this.X_obstical2.Size = new System.Drawing.Size(100, 20);
-            this.X_obstical2.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 58);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Y coordinate :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "X coordinate :";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.Y_obstical1);
-            this.groupBox1.Controls.Add(this.X_Obsticle1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(40, 30);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(331, 96);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Coordinates of obstacle 1";
-            // 
-            // Y_obstical1
-            // 
-            this.Y_obstical1.Location = new System.Drawing.Point(86, 54);
-            this.Y_obstical1.Name = "Y_obstical1";
-            this.Y_obstical1.Size = new System.Drawing.Size(100, 20);
-            this.Y_obstical1.TabIndex = 3;
-            // 
-            // X_Obsticle1
-            // 
-            this.X_Obsticle1.Location = new System.Drawing.Point(86, 24);
-            this.X_Obsticle1.Name = "X_Obsticle1";
-            this.X_Obsticle1.Size = new System.Drawing.Size(100, 20);
-            this.X_Obsticle1.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Y coordinate :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "X coordinate :";
             // 
             // tabPage2
             // 
@@ -464,7 +195,7 @@
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage2.Size = new System.Drawing.Size(420, 800);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Plane specification";
@@ -474,7 +205,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(131, 465);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(188, 44);
             this.button2.TabIndex = 12;
@@ -507,7 +238,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(261, 304);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -535,7 +266,7 @@
             "50000",
             "55000"});
             this.comboBox2.Location = new System.Drawing.Point(261, 254);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(126, 21);
             this.comboBox2.TabIndex = 14;
@@ -548,7 +279,7 @@
             "200000",
             "300000"});
             this.cmbWeight.Location = new System.Drawing.Point(261, 152);
-            this.cmbWeight.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbWeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbWeight.Name = "cmbWeight";
             this.cmbWeight.Size = new System.Drawing.Size(126, 21);
             this.cmbWeight.TabIndex = 13;
@@ -673,7 +404,7 @@
             this.tabPlaneView.Controls.Add(this.pictureBox8);
             this.tabPlaneView.Location = new System.Drawing.Point(4, 22);
             this.tabPlaneView.Name = "tabPlaneView";
-            this.tabPlaneView.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPlaneView.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPlaneView.Size = new System.Drawing.Size(420, 800);
             this.tabPlaneView.TabIndex = 0;
             this.tabPlaneView.Text = "Plane View";
@@ -682,7 +413,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(129, 376);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(188, 44);
             this.button1.TabIndex = 11;
@@ -741,7 +472,7 @@
             // 
             this.btnProceedPlanView.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProceedPlanView.Location = new System.Drawing.Point(74, 283);
-            this.btnProceedPlanView.Margin = new System.Windows.Forms.Padding(2);
+            this.btnProceedPlanView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnProceedPlanView.Name = "btnProceedPlanView";
             this.btnProceedPlanView.Size = new System.Drawing.Size(286, 33);
             this.btnProceedPlanView.TabIndex = 31;
@@ -753,7 +484,7 @@
             // 
             this.btnSetUpObstacles.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetUpObstacles.Location = new System.Drawing.Point(74, 86);
-            this.btnSetUpObstacles.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSetUpObstacles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSetUpObstacles.Name = "btnSetUpObstacles";
             this.btnSetUpObstacles.Size = new System.Drawing.Size(286, 33);
             this.btnSetUpObstacles.TabIndex = 30;
@@ -764,7 +495,7 @@
             // numudObstacles
             // 
             this.numudObstacles.Location = new System.Drawing.Point(106, 63);
-            this.numudObstacles.Margin = new System.Windows.Forms.Padding(2);
+            this.numudObstacles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numudObstacles.Maximum = new decimal(new int[] {
             5,
             0,
@@ -812,7 +543,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
             this.pictureBox1.Location = new System.Drawing.Point(59, 68);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 33);
             this.pictureBox1.TabIndex = 11;
@@ -822,7 +553,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Black;
             this.pictureBox4.Location = new System.Drawing.Point(182, 138);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(22, 28);
             this.pictureBox4.TabIndex = 14;
@@ -832,7 +563,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Black;
             this.pictureBox5.Location = new System.Drawing.Point(370, 20);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(27, 21);
             this.pictureBox5.TabIndex = 15;
@@ -842,7 +573,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Black;
             this.pictureBox6.Location = new System.Drawing.Point(34, 158);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(79, 15);
             this.pictureBox6.TabIndex = 16;
@@ -851,8 +582,8 @@
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Black;
-            this.pictureBox7.Location = new System.Drawing.Point(269, 42);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox7.Location = new System.Drawing.Point(274, 41);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(19, 37);
             this.pictureBox7.TabIndex = 17;
@@ -862,7 +593,7 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Black;
             this.pictureBox9.Location = new System.Drawing.Point(182, 76);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(13, 12);
             this.pictureBox9.TabIndex = 18;
@@ -938,7 +669,7 @@
             // 
             this.picObstacle1.BackColor = System.Drawing.Color.Red;
             this.picObstacle1.Location = new System.Drawing.Point(180, 345);
-            this.picObstacle1.Margin = new System.Windows.Forms.Padding(2);
+            this.picObstacle1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picObstacle1.Name = "picObstacle1";
             this.picObstacle1.Size = new System.Drawing.Size(15, 15);
             this.picObstacle1.TabIndex = 37;
@@ -949,7 +680,7 @@
             // 
             this.picObstacle4.BackColor = System.Drawing.Color.Red;
             this.picObstacle4.Location = new System.Drawing.Point(452, 303);
-            this.picObstacle4.Margin = new System.Windows.Forms.Padding(2);
+            this.picObstacle4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picObstacle4.Name = "picObstacle4";
             this.picObstacle4.Size = new System.Drawing.Size(15, 15);
             this.picObstacle4.TabIndex = 38;
@@ -960,7 +691,7 @@
             // 
             this.picObstacle3.BackColor = System.Drawing.Color.Red;
             this.picObstacle3.Location = new System.Drawing.Point(362, 247);
-            this.picObstacle3.Margin = new System.Windows.Forms.Padding(2);
+            this.picObstacle3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picObstacle3.Name = "picObstacle3";
             this.picObstacle3.Size = new System.Drawing.Size(15, 15);
             this.picObstacle3.TabIndex = 39;
@@ -971,7 +702,7 @@
             // 
             this.picObstacle2.BackColor = System.Drawing.Color.Red;
             this.picObstacle2.Location = new System.Drawing.Point(362, 359);
-            this.picObstacle2.Margin = new System.Windows.Forms.Padding(2);
+            this.picObstacle2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picObstacle2.Name = "picObstacle2";
             this.picObstacle2.Size = new System.Drawing.Size(15, 15);
             this.picObstacle2.TabIndex = 40;
@@ -982,7 +713,7 @@
             // 
             this.picObstacle5.BackColor = System.Drawing.Color.Red;
             this.picObstacle5.Location = new System.Drawing.Point(529, 224);
-            this.picObstacle5.Margin = new System.Windows.Forms.Padding(2);
+            this.picObstacle5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picObstacle5.Name = "picObstacle5";
             this.picObstacle5.Size = new System.Drawing.Size(15, 15);
             this.picObstacle5.TabIndex = 41;
@@ -993,18 +724,17 @@
             // 
             this.picShoot1.BackColor = System.Drawing.Color.Gold;
             this.picShoot1.Location = new System.Drawing.Point(182, 337);
-            this.picShoot1.Margin = new System.Windows.Forms.Padding(2);
+            this.picShoot1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picShoot1.Name = "picShoot1";
             this.picShoot1.Size = new System.Drawing.Size(8, 11);
             this.picShoot1.TabIndex = 42;
             this.picShoot1.TabStop = false;
-            this.picShoot1.Visible = false;
             // 
             // picShoot4
             // 
             this.picShoot4.BackColor = System.Drawing.Color.Gold;
             this.picShoot4.Location = new System.Drawing.Point(527, 288);
-            this.picShoot4.Margin = new System.Windows.Forms.Padding(2);
+            this.picShoot4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picShoot4.Name = "picShoot4";
             this.picShoot4.Size = new System.Drawing.Size(8, 11);
             this.picShoot4.TabIndex = 43;
@@ -1015,7 +745,7 @@
             // 
             this.picShoot3.BackColor = System.Drawing.Color.Gold;
             this.picShoot3.Location = new System.Drawing.Point(533, 295);
-            this.picShoot3.Margin = new System.Windows.Forms.Padding(2);
+            this.picShoot3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picShoot3.Name = "picShoot3";
             this.picShoot3.Size = new System.Drawing.Size(8, 11);
             this.picShoot3.TabIndex = 44;
@@ -1026,7 +756,7 @@
             // 
             this.picShoot2.BackColor = System.Drawing.Color.Gold;
             this.picShoot2.Location = new System.Drawing.Point(362, 349);
-            this.picShoot2.Margin = new System.Windows.Forms.Padding(2);
+            this.picShoot2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picShoot2.Name = "picShoot2";
             this.picShoot2.Size = new System.Drawing.Size(8, 11);
             this.picShoot2.TabIndex = 45;
@@ -1037,7 +767,7 @@
             // 
             this.picShoot5.BackColor = System.Drawing.Color.Gold;
             this.picShoot5.Location = new System.Drawing.Point(533, 209);
-            this.picShoot5.Margin = new System.Windows.Forms.Padding(2);
+            this.picShoot5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picShoot5.Name = "picShoot5";
             this.picShoot5.Size = new System.Drawing.Size(8, 11);
             this.picShoot5.TabIndex = 46;
@@ -1047,6 +777,82 @@
             // timeShoot1
             // 
             this.timeShoot1.Tick += new System.EventHandler(this.timeShoot1_Tick);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(39, 67);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(315, 69);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "SIMULATE";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.txtJetAltitude);
+            this.groupBox7.Controls.Add(this.txtFuelLeft);
+            this.groupBox7.Controls.Add(this.txtCargoWeight);
+            this.groupBox7.Controls.Add(this.label23);
+            this.groupBox7.Controls.Add(this.label18);
+            this.groupBox7.Controls.Add(this.label16);
+            this.groupBox7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.ForeColor = System.Drawing.Color.White;
+            this.groupBox7.Location = new System.Drawing.Point(39, 167);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(335, 141);
+            this.groupBox7.TabIndex = 13;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Jet Constraints";
+            // 
+            // txtJetAltitude
+            // 
+            this.txtJetAltitude.Location = new System.Drawing.Point(157, 94);
+            this.txtJetAltitude.Name = "txtJetAltitude";
+            this.txtJetAltitude.Size = new System.Drawing.Size(158, 26);
+            this.txtJetAltitude.TabIndex = 5;
+            // 
+            // txtFuelLeft
+            // 
+            this.txtFuelLeft.Location = new System.Drawing.Point(157, 58);
+            this.txtFuelLeft.Name = "txtFuelLeft";
+            this.txtFuelLeft.Size = new System.Drawing.Size(158, 26);
+            this.txtFuelLeft.TabIndex = 4;
+            // 
+            // txtCargoWeight
+            // 
+            this.txtCargoWeight.Location = new System.Drawing.Point(157, 21);
+            this.txtCargoWeight.Name = "txtCargoWeight";
+            this.txtCargoWeight.Size = new System.Drawing.Size(158, 26);
+            this.txtCargoWeight.TabIndex = 3;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(11, 62);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(122, 18);
+            this.label23.TabIndex = 2;
+            this.label23.Text = "Amount of fuel";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(20, 97);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(70, 18);
+            this.label18.TabIndex = 1;
+            this.label18.Text = "Altitude";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(14, 24);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(116, 18);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Cargo Weight";
             // 
             // Main_Simulator_
             // 
@@ -1087,16 +893,6 @@
             this.Load += new System.EventHandler(this.Main_Simulator__Load);
             ((System.ComponentModel.ISupportInitialize)(this.picPlaneMap)).EndInit();
             this.tabPage4.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -1124,6 +920,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picShoot3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picShoot2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picShoot5)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1137,33 +935,6 @@
         private System.Windows.Forms.Label Location1;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.TextBox txtJetAltitude;
-        private System.Windows.Forms.TextBox txtFuelLeft;
-        private System.Windows.Forms.TextBox txtCargoWeight;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox Y_obstical4;
-        private System.Windows.Forms.TextBox X_obstical4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox Y_obstical3;
-        private System.Windows.Forms.TextBox X_obstical3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox Y_obstical2;
-        private System.Windows.Forms.TextBox X_obstical2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox Y_obstical1;
-        private System.Windows.Forms.TextBox X_Obsticle1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -1215,5 +986,13 @@
         private System.Windows.Forms.PictureBox picShoot2;
         private System.Windows.Forms.PictureBox picShoot5;
         private System.Windows.Forms.Timer timeShoot1;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox txtJetAltitude;
+        private System.Windows.Forms.TextBox txtFuelLeft;
+        private System.Windows.Forms.TextBox txtCargoWeight;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button button3;
     }
 }
