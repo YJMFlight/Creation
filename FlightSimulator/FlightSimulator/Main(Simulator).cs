@@ -33,29 +33,7 @@ namespace FlightSimulator
 
         private void timePlaneMove_Tick(object sender, EventArgs e)
         {
-            picPlaneMap.SetBounds(movePlaneX, (int)movePlaneY, 1, 1);
-
-            if(cnt == 0)
-            {
-                movePlaneX++;
-                movePlaneY = movePlaneY + 0.60f;
-            }
-
-            if(cnt == 1)
-            {
-                movePlaneX--;
-                movePlaneY = movePlaneY - 0.60f;
-            }
-
-            if (movePlaneX == 700)
-            {
-                cnt = 1;
-            }
-
-            if (movePlaneX == 1)
-            {
-                cnt = 0;
-            }
+            picPlaneMap.Location = new Point(picPlaneMap.Location.X - 3, picPlaneMap.Location.Y);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -369,7 +347,7 @@ namespace FlightSimulator
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            timePlaneMove.Interval = 1;
+            timePlaneMove.Interval = 100;
             timePlaneMove.Start();
         }
 
@@ -434,6 +412,14 @@ namespace FlightSimulator
             }
         }
 
+        int speed = 0;
+        int alitude = 0;
+
+        private void btnAlter_Click(object sender, EventArgs e)
+        {
+            
+
+        }
 
         public void ShootFour()
         {
