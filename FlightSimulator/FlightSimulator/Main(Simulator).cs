@@ -101,7 +101,7 @@ namespace FlightSimulator
 
             for (int i = 0; i < NumberofObstacles; i++)
             {
-                XCo_OrdinateCheck = Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate X:", "Valid co-ordinate: 0 - 640");
+                XCo_OrdinateCheck = Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate X:", "Valid co-ordinate: 0 - 540");
                 YCo_OrdinateCheck = Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate Y:", "Valid co-ordinate: 191 - 525");
 
                     ValidX = Int32.TryParse(XCo_OrdinateCheck, out ValidNumber);
