@@ -502,9 +502,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(145, 366);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 50);
+            this.label1.Size = new System.Drawing.Size(279, 50);
             this.label1.TabIndex = 10;
-            this.label1.Text = "JET 766EEE1";
+            this.label1.Text = "JET 766EEE";
             // 
             // lblJetSee
             // 
@@ -608,7 +608,7 @@
             this.tabPlane.Controls.Add(this.tabPage2);
             this.tabPlane.Controls.Add(this.tabPage4);
             this.tabPlane.Controls.Add(this.tabPage5);
-            this.tabPlane.Location = new System.Drawing.Point(1077, 0);
+            this.tabPlane.Location = new System.Drawing.Point(1076, -5);
             this.tabPlane.Margin = new System.Windows.Forms.Padding(4);
             this.tabPlane.Name = "tabPlane";
             this.tabPlane.SelectedIndex = 0;
@@ -812,6 +812,7 @@
             this.picShoot1.Size = new System.Drawing.Size(11, 14);
             this.picShoot1.TabIndex = 42;
             this.picShoot1.TabStop = false;
+            this.picShoot1.Visible = false;
             // 
             // picShoot4
             // 
