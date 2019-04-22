@@ -28,9 +28,34 @@ namespace FlightSimulator
 
         }
 
+        int movePlaneX, cnt = 0;
+        float movePlaneY = 1f;
+
         private void timePlaneMove_Tick(object sender, EventArgs e)
         {
-          
+            picPlaneMap.SetBounds(movePlaneX, (int)movePlaneY, 1, 1);
+
+            if(cnt == 0)
+            {
+                movePlaneX++;
+                movePlaneY = movePlaneY + 0.60f;
+            }
+
+            if(cnt == 1)
+            {
+                movePlaneX--;
+                movePlaneY = movePlaneY - 0.60f;
+            }
+
+            if (movePlaneX == 700)
+            {
+                cnt = 1;
+            }
+
+            if (movePlaneX == 1)
+            {
+                cnt = 0;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -231,6 +256,15 @@ namespace FlightSimulator
             }
             
            
+        }
+
+       
+
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            timePlaneMove.Interval = 1;
+            timePlaneMove.Start();
         }
 
         protected override void OnMouseMove(MouseEventArgs e)
