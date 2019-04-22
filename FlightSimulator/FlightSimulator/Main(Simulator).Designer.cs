@@ -36,7 +36,11 @@
             this.Location1 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btnAlter = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.numudAltitude = new System.Windows.Forms.NumericUpDown();
+            this.numudSpeed = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtFuelLeft = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -88,13 +92,11 @@
             this.picShoot2 = new System.Windows.Forms.PictureBox();
             this.picShoot5 = new System.Windows.Forms.PictureBox();
             this.timeShoot1 = new System.Windows.Forms.Timer(this.components);
-            this.btnAlter = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numudSpeed = new System.Windows.Forms.NumericUpDown();
-            this.numudAltitude = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.picPlaneMap)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numudAltitude)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numudSpeed)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPlaneView.SuspendLayout();
@@ -118,8 +120,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picShoot3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picShoot2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picShoot5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numudSpeed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numudAltitude)).BeginInit();
             this.SuspendLayout();
             // 
             // picPlaneMap
@@ -166,7 +166,7 @@
             // tabPage5
             // 
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(539, 988);
             this.tabPage5.TabIndex = 4;
@@ -180,11 +180,23 @@
             this.tabPage4.Controls.Add(this.groupBox7);
             this.tabPage4.Controls.Add(this.button3);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(539, 988);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Constraints";
+            // 
+            // btnAlter
+            // 
+            this.btnAlter.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlter.Location = new System.Drawing.Point(145, 417);
+            this.btnAlter.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAlter.Name = "btnAlter";
+            this.btnAlter.Size = new System.Drawing.Size(245, 38);
+            this.btnAlter.TabIndex = 14;
+            this.btnAlter.Text = "ALTER";
+            this.btnAlter.UseVisualStyleBackColor = true;
+            this.btnAlter.Click += new System.EventHandler(this.btnAlter_Click);
             // 
             // groupBox7
             // 
@@ -197,18 +209,72 @@
             this.groupBox7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.ForeColor = System.Drawing.Color.White;
             this.groupBox7.Location = new System.Drawing.Point(52, 206);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox7.Size = new System.Drawing.Size(447, 174);
             this.groupBox7.TabIndex = 13;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Jet Constraints";
             // 
+            // numudAltitude
+            // 
+            this.numudAltitude.Location = new System.Drawing.Point(209, 117);
+            this.numudAltitude.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numudAltitude.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numudAltitude.Name = "numudAltitude";
+            this.numudAltitude.Size = new System.Drawing.Size(211, 31);
+            this.numudAltitude.TabIndex = 8;
+            this.numudAltitude.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // numudSpeed
+            // 
+            this.numudSpeed.Location = new System.Drawing.Point(211, 33);
+            this.numudSpeed.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numudSpeed.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numudSpeed.Name = "numudSpeed";
+            this.numudSpeed.Size = new System.Drawing.Size(211, 31);
+            this.numudSpeed.TabIndex = 7;
+            this.numudSpeed.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 35);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 23);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Speed";
+            // 
             // txtFuelLeft
             // 
             this.txtFuelLeft.Location = new System.Drawing.Point(211, 73);
-            this.txtFuelLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFuelLeft.Margin = new System.Windows.Forms.Padding(4);
             this.txtFuelLeft.Name = "txtFuelLeft";
             this.txtFuelLeft.Size = new System.Drawing.Size(209, 31);
             this.txtFuelLeft.TabIndex = 4;
@@ -237,7 +303,7 @@
             // 
             this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(52, 82);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(420, 85);
             this.button3.TabIndex = 0;
@@ -251,9 +317,9 @@
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(539, 988);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Plane specification";
@@ -283,9 +349,9 @@
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Location = new System.Drawing.Point(8, 30);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(568, 458);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
@@ -307,7 +373,7 @@
             // txtPlaneName
             // 
             this.txtPlaneName.Location = new System.Drawing.Point(348, 78);
-            this.txtPlaneName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPlaneName.Margin = new System.Windows.Forms.Padding(4);
             this.txtPlaneName.Name = "txtPlaneName";
             this.txtPlaneName.Size = new System.Drawing.Size(167, 22);
             this.txtPlaneName.TabIndex = 10;
@@ -316,7 +382,7 @@
             // 
             this.txtPlaneTankSize.Enabled = false;
             this.txtPlaneTankSize.Location = new System.Drawing.Point(348, 254);
-            this.txtPlaneTankSize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPlaneTankSize.Margin = new System.Windows.Forms.Padding(4);
             this.txtPlaneTankSize.Name = "txtPlaneTankSize";
             this.txtPlaneTankSize.Size = new System.Drawing.Size(167, 22);
             this.txtPlaneTankSize.TabIndex = 8;
@@ -326,7 +392,7 @@
             // 
             this.txtPlaneModel.Enabled = false;
             this.txtPlaneModel.Location = new System.Drawing.Point(348, 130);
-            this.txtPlaneModel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPlaneModel.Margin = new System.Windows.Forms.Padding(4);
             this.txtPlaneModel.Name = "txtPlaneModel";
             this.txtPlaneModel.Size = new System.Drawing.Size(167, 22);
             this.txtPlaneModel.TabIndex = 6;
@@ -336,7 +402,7 @@
             // 
             this.txtPlaneID.Enabled = false;
             this.txtPlaneID.Location = new System.Drawing.Point(348, 30);
-            this.txtPlaneID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPlaneID.Margin = new System.Windows.Forms.Padding(4);
             this.txtPlaneID.Name = "txtPlaneID";
             this.txtPlaneID.Size = new System.Drawing.Size(167, 22);
             this.txtPlaneID.TabIndex = 5;
@@ -410,9 +476,9 @@
             this.tabPlaneView.Controls.Add(this.lblJetSee);
             this.tabPlaneView.Controls.Add(this.pictureBox8);
             this.tabPlaneView.Location = new System.Drawing.Point(4, 25);
-            this.tabPlaneView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPlaneView.Margin = new System.Windows.Forms.Padding(4);
             this.tabPlaneView.Name = "tabPlaneView";
-            this.tabPlaneView.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPlaneView.Padding = new System.Windows.Forms.Padding(4);
             this.tabPlaneView.Size = new System.Drawing.Size(539, 988);
             this.tabPlaneView.TabIndex = 0;
             this.tabPlaneView.Text = "Plane View";
@@ -456,7 +522,7 @@
             this.pictureBox8.BackgroundImage = global::FlightSimulator.Properties.Resources.Webp_net_resizeimage__2_;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox8.Location = new System.Drawing.Point(21, 121);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(543, 218);
             this.pictureBox8.TabIndex = 8;
@@ -470,7 +536,7 @@
             this.tabPage3.Controls.Add(this.numudObstacles);
             this.tabPage3.Controls.Add(this.label24);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(539, 988);
             this.tabPage3.TabIndex = 2;
@@ -543,11 +609,12 @@
             this.tabPlane.Controls.Add(this.tabPage4);
             this.tabPlane.Controls.Add(this.tabPage5);
             this.tabPlane.Location = new System.Drawing.Point(1077, 0);
-            this.tabPlane.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPlane.Margin = new System.Windows.Forms.Padding(4);
             this.tabPlane.Name = "tabPlane";
             this.tabPlane.SelectedIndex = 0;
             this.tabPlane.Size = new System.Drawing.Size(547, 1017);
             this.tabPlane.TabIndex = 6;
+            this.tabPlane.SelectedIndexChanged += new System.EventHandler(this.tabPlane_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -794,72 +861,6 @@
             // 
             this.timeShoot1.Tick += new System.EventHandler(this.timeShoot1_Tick);
             // 
-            // btnAlter
-            // 
-            this.btnAlter.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlter.Location = new System.Drawing.Point(145, 417);
-            this.btnAlter.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAlter.Name = "btnAlter";
-            this.btnAlter.Size = new System.Drawing.Size(245, 38);
-            this.btnAlter.TabIndex = 14;
-            this.btnAlter.Text = "ALTER";
-            this.btnAlter.UseVisualStyleBackColor = true;
-            this.btnAlter.Click += new System.EventHandler(this.btnAlter_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 35);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 23);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Speed";
-            // 
-            // numudSpeed
-            // 
-            this.numudSpeed.Location = new System.Drawing.Point(211, 33);
-            this.numudSpeed.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numudSpeed.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numudSpeed.Name = "numudSpeed";
-            this.numudSpeed.Size = new System.Drawing.Size(211, 31);
-            this.numudSpeed.TabIndex = 7;
-            this.numudSpeed.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // numudAltitude
-            // 
-            this.numudAltitude.Location = new System.Drawing.Point(209, 117);
-            this.numudAltitude.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numudAltitude.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numudAltitude.Name = "numudAltitude";
-            this.numudAltitude.Size = new System.Drawing.Size(211, 31);
-            this.numudAltitude.TabIndex = 8;
-            this.numudAltitude.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // Main_Simulator_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -894,7 +895,7 @@
             this.Controls.Add(this.Location2);
             this.Controls.Add(this.lblPlaneShow);
             this.Controls.Add(this.picPlaneMap);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Main_Simulator_";
             this.Text = "Main_Simulator_";
             this.Load += new System.EventHandler(this.Main_Simulator__Load);
@@ -902,6 +903,8 @@
             this.tabPage4.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numudAltitude)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numudSpeed)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -928,8 +931,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picShoot3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picShoot2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picShoot5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numudSpeed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numudAltitude)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

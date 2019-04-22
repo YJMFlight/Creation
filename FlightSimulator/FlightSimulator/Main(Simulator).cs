@@ -421,6 +421,12 @@ namespace FlightSimulator
 
         }
 
+        private void tabPlane_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
         public void ShootFour()
         {
             if (this.picShoot4.InvokeRequired)
