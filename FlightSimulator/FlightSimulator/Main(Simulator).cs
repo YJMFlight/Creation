@@ -209,28 +209,22 @@ namespace FlightSimulator
 
         private void btnProceedPlanView_Click(object sender, EventArgs e)
         {
-            
-            timeShoot1.Interval = 2000;
-            timeShoot1.Start();
-           
+
+            tabPlane.SelectedTab = tabPlaneView;
            
            
         }
 
         private void timeShoot1_Tick(object sender, EventArgs e)
         {
-            int count = 0;
-            int YLocation = picShoot1.Location.Y;
-
-            picShoot1.Location = new Point(picShoot1.Location.X, picShoot1.Location.Y - 3);
-            count = count + 1;
-
-            if (count == 10)
-            {
-                picShoot1.Location = new Point(picShoot1.Location.X, Co_OrdinatesShoot[1]);
-            }
+           
             
            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
 
         protected override void OnMouseMove(MouseEventArgs e)
