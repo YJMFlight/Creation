@@ -172,7 +172,7 @@
             // 
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(420, 800);
+            this.tabPage5.Size = new System.Drawing.Size(402, 800);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -184,7 +184,7 @@
             this.tabPage4.Controls.Add(this.button3);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(420, 800);
+            this.tabPage4.Size = new System.Drawing.Size(402, 800);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Constraints";
             // 
@@ -481,7 +481,7 @@
             this.tabPlaneView.Location = new System.Drawing.Point(4, 22);
             this.tabPlaneView.Name = "tabPlaneView";
             this.tabPlaneView.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPlaneView.Size = new System.Drawing.Size(420, 800);
+            this.tabPlaneView.Size = new System.Drawing.Size(402, 800);
             this.tabPlaneView.TabIndex = 0;
             this.tabPlaneView.Text = "Plane View";
             // 
@@ -525,7 +525,7 @@
             // 
             this.pictureBox8.BackgroundImage = global::FlightSimulator.Properties.Resources.Webp_net_resizeimage__2_;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox8.Location = new System.Drawing.Point(16, 98);
+            this.pictureBox8.Location = new System.Drawing.Point(6, 100);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(407, 177);
             this.pictureBox8.TabIndex = 8;
@@ -540,7 +540,7 @@
             this.tabPage3.Controls.Add(this.label24);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(377, 800);
+            this.tabPage3.Size = new System.Drawing.Size(402, 800);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Obstacles";
             // 
@@ -805,6 +805,7 @@
             this.picShoot1.Size = new System.Drawing.Size(8, 11);
             this.picShoot1.TabIndex = 42;
             this.picShoot1.TabStop = false;
+            this.picShoot1.Visible = false;
             // 
             // picShoot4
             // 

@@ -79,6 +79,13 @@ namespace FlightSimulator
 
 
 
+        int shooter_one_count = 30;
+        int shooter_two_count = 20;
+        int shooter_three_count = 10;
+        int shooter_four_count = 25;
+        int shooter_five_count = 35;
+        
+
         private void button3_Click(object sender, EventArgs e)
         {
             double NumberofObstacles = Convert.ToDouble(numudObstacles.Value);
@@ -101,8 +108,8 @@ namespace FlightSimulator
 
             for (int i = 0; i < NumberofObstacles; i++)
             {
-                XCo_OrdinateCheck = Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate X:", "Valid co-ordinate: 0 - 540");
-                YCo_OrdinateCheck = Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate Y:", "Valid co-ordinate: 191 - 525");
+                XCo_OrdinateCheck = Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate X:", "Valid co-ordinate: 218 - 676");
+                YCo_OrdinateCheck = Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate Y:", "Valid co-ordinate: 186 - 552");
 
                     ValidX = Int32.TryParse(XCo_OrdinateCheck, out ValidNumber);
                     ValidY = Int32.TryParse(YCo_OrdinateCheck, out ValidNumber);
@@ -111,8 +118,8 @@ namespace FlightSimulator
                 {
                     MessageBox.Show("These entries aren't valid. May we have real numbers?");
 
-                    XCo_OrdinateCheck = Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate X:", "Valid co-ordinate: 0 - 640");
-                    YCo_OrdinateCheck = Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate Y:", "Valid co-ordinate: 191 - 525");
+                    XCo_OrdinateCheck = Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate X:", "Valid co - ordinate: 218 - 676");
+                    YCo_OrdinateCheck = Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate Y:", "Valid co-ordinate: 186 - 552");
 
                     ValidX = Int32.TryParse(XCo_OrdinateCheck, out ValidNumber);
                     ValidY = Int32.TryParse(YCo_OrdinateCheck, out ValidNumber);
@@ -123,11 +130,11 @@ namespace FlightSimulator
 
               
 
-                while ((XCo_ordinate < 0 || XCo_ordinate > 640) && (YCo_ordinate < 191 || YCo_ordinate > 552))
+                while ((XCo_ordinate < 218 || XCo_ordinate > 676) && (YCo_ordinate < 186 || YCo_ordinate > 552))
                 {
                     MessageBox.Show("Co_ordinates for Obstacle " + (i + 1) + " are out of bounds! Re-enter.");
-                    XCo_ordinate = Convert.ToInt32(Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate X:", "Valid co-ordinate: 0 - 640"));
-                    YCo_ordinate = Convert.ToInt32(Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate Y:", "Valid co - ordinate: 191 - 552"));
+                    XCo_ordinate = Convert.ToInt32(Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate X:", "Valid co-ordinate: 218 - 676"));
+                    YCo_ordinate = Convert.ToInt32(Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate Y:", "Valid co-ordinate: 186 - 552"));
 
                   
                 }
@@ -150,56 +157,98 @@ namespace FlightSimulator
 
             Thread shooter_1 = new Thread(delegate () {
 
+                int Temp = Co_OrdinatesShoot[1];
+
                 ShootYOne = Co_OrdinatesShoot[1];
-                for (int i = 0; i < 10; i++)
+               
+                for (int i = 0; i < shooter_one_count; i++)
                 {
                     ShootYOne = ShootYOne - 3;
                     ShootOne();
-                    Thread.Sleep(500);
+                    Thread.Sleep(100);
+                    
+
+                    if (i == shooter_one_count - 1)
+                    {
+                        ShootYOne = Temp;
+                        i = 0;
+                    }
                 }
+
             });
 
             Thread shooter_2 = new Thread(delegate () {
 
-                //ShootYTwo = Co_OrdinatesShoot[3];
-                for (int i = 0; i < 10; i++)
+                int Temp2 = Co_OrdinatesShoot[3];
+
+                ShootYTwo = Co_OrdinatesShoot[3];
+                for (int i = 0; i < shooter_two_count; i++)
                 {
                     ShootYTwo = ShootYTwo - 3;
                     ShootTwo();
-                    Thread.Sleep(500);
+                    Thread.Sleep(200);
+
+                    if (i == shooter_two_count - 1 )
+                    {
+                        ShootYTwo = Temp2;
+                        i = 0;
+                    }
                 }
             });
 
             Thread shooter_3 = new Thread(delegate () {
 
+                int Temp3 = Co_OrdinatesShoot[5];
+
                 ShootYThree = Co_OrdinatesShoot[5];
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < shooter_three_count; i++)
                 {
                     ShootYThree = ShootYThree - 3;
                     ShootThree();
-                    Thread.Sleep(500);
+                    Thread.Sleep(100);
+
+                    if (i == shooter_three_count - 1)
+                    {
+                        ShootYThree = Temp3;
+                        i = 0;
+                    }
+
                 }
             });
 
             Thread shooter_4 = new Thread(delegate () {
 
+                int Temp4 = Co_OrdinatesShoot[7];
                 ShootYFour = Co_OrdinatesShoot[7];
-                for (int i = 0; i < 10; i++)
+               
+                for (int i = 0; i < shooter_four_count; i++)
                 {
                     ShootYFour = ShootYFour - 3;
                     ShootFour();
-                    Thread.Sleep(500);
+                    Thread.Sleep(10);
+
+                    if (i == shooter_four_count-1)
+                    {
+                        ShootYFour = Temp4;
+                        i = 0;
+                    }
                 }
             });
 
             Thread shooter_5 = new Thread(delegate () {
-                
+                int Temp5 = Co_OrdinatesShoot[9];
                 ShootYFive = Co_OrdinatesShoot[9];
-                for ( int i = 0; i < 10; i++)
+                for ( int i = 0; i < shooter_five_count; i++)
                 {
                     ShootYFive = ShootYFive - 3;
                     ShootFive();
-                    Thread.Sleep(500);
+                    Thread.Sleep(1000);
+
+                    if (i == shooter_five_count-1)
+                    {
+                        ShootYFive = Temp5;
+                        i = 0;
+                    }
                 }
             });
 
@@ -217,6 +266,8 @@ namespace FlightSimulator
                     picShoot1.Location = new Point(Co_OrdinatesShoot[0], Co_OrdinatesShoot[1]);
                     picShoot1.Visible = true;
                     shooter_1.Start();
+                
+                   
                     break;
 
                 case 2:
@@ -350,16 +401,7 @@ namespace FlightSimulator
 
         private void timeShoot1_Tick(object sender, EventArgs e)
         {
-            int count = 0;
-            int YLocation = picShoot1.Location.Y;
-
-            picShoot1.Location = new Point(picShoot1.Location.X, picShoot1.Location.Y - 3);
-            count = count + 1;
-
-            if (count == 10)
-            {
-                picShoot1.Location = new Point(picShoot1.Location.X, Co_OrdinatesShoot[1]);
-            }
+           
             
            
         }
@@ -396,9 +438,7 @@ namespace FlightSimulator
             }
             else
             {
-
-                this.picShoot1.Location = new Point(Co_OrdinatesShoot[0], ShootYOne );
-      
+                this.picShoot1.Location = new Point(Co_OrdinatesShoot[0], ShootYOne);
             }
         }
 
