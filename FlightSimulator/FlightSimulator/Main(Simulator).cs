@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
+using System.Threading;
 
 namespace FlightSimulator
 {
@@ -43,83 +45,192 @@ namespace FlightSimulator
 
         }
 
-        private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
+        List<int> Co_OrdinatesShoot = new List<int>();
+        int ShootYOne = 0;
+        
+        private void button3_Click(object sender, EventArgs e)
         {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            double NumberofObstacles = Convert.ToDouble(numudObstacles.Value);
+            List<int> Co_ordinates = new List<int>();
+         
+
+            int XCo_ordinate = 0;
+            int YCo_ordinate = 0;
+            int XCo_OrdinateShoot = 0;
+            int YCo_OrdinateShoot = 0;
+
+
+            string XCo_OrdinateCheck = "";
+            string YCo_OrdinateCheck = "";
+            int ValidNumber;
+
+            bool ValidX = false;
+            bool ValidY = false;
+
+
+            for (int i = 0; i < NumberofObstacles; i++)
             {
-                MouseDownLocation = e.Location;
+                XCo_OrdinateCheck = Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate X:", "Valid co-ordinate: 0 - 640");
+                YCo_OrdinateCheck = Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate Y:", "Valid co-ordinate: 191 - 525");
+
+                    ValidX = Int32.TryParse(XCo_OrdinateCheck, out ValidNumber);
+                    ValidY = Int32.TryParse(YCo_OrdinateCheck, out ValidNumber);
+                
+                while (ValidX == false || ValidY == false)
+                {
+                    MessageBox.Show("These entries aren't valid. May we have real numbers?");
+
+                    XCo_OrdinateCheck = Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate X:", "Valid co-ordinate: 0 - 640");
+                    YCo_OrdinateCheck = Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate Y:", "Valid co-ordinate: 191 - 525");
+
+                    ValidX = Int32.TryParse(XCo_OrdinateCheck, out ValidNumber);
+                    ValidY = Int32.TryParse(YCo_OrdinateCheck, out ValidNumber);
+                }
+
+                XCo_ordinate = Convert.ToInt32(XCo_OrdinateCheck);
+                YCo_ordinate = Convert.ToInt32(YCo_OrdinateCheck);
+
+              
+
+                while ((XCo_ordinate < 0 || XCo_ordinate > 640) && (YCo_ordinate < 191 || YCo_ordinate > 552))
+                {
+                    MessageBox.Show("Co_ordinates for Obstacle " + (i + 1) + " are out of bounds! Re-enter.");
+                    XCo_ordinate = Convert.ToInt32(Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate X:", "Valid co-ordinate: 0 - 640"));
+                    YCo_ordinate = Convert.ToInt32(Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate Y:", "Valid co - ordinate: 191 - 552"));
+
+                  
+                }
+
+               Co_ordinates.Add(XCo_ordinate);
+               Co_ordinates.Add(YCo_ordinate);
+
+                XCo_OrdinateShoot = XCo_ordinate + 3;
+                YCo_OrdinateShoot = YCo_ordinate - 10;
+
+                Co_OrdinatesShoot.Add(XCo_OrdinateShoot);
+               Co_OrdinatesShoot.Add(YCo_OrdinateShoot);
+                
+               XCo_ordinate = 0;
+               YCo_ordinate = 0;
+
+                XCo_OrdinateShoot = 0;
+                YCo_OrdinateShoot = 0;
             }
 
-        }
-
-        private void pictureBox4_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            switch (NumberofObstacles)
             {
-                pictureBox4.Left = e.X + pictureBox4.Left - MouseDownLocation.X;
-                pictureBox4.Top = e.Y + pictureBox4.Top - MouseDownLocation.Y;
+                case 1:
+
+                    picObstacle1.Visible = true;
+                    picObstacle1.Location = new Point(Co_ordinates[0], Co_ordinates[1]);
+
+                    picShoot1.Location = new Point(Co_OrdinatesShoot[0], Co_OrdinatesShoot[1]);
+                    break;
+
+                case 2:
+                    picObstacle1.Visible = true;
+                    picObstacle1.Location = new Point(Co_ordinates[0], Co_ordinates[1]);
+                    picShoot1.Location = new Point(Co_OrdinatesShoot[0], Co_OrdinatesShoot[1]);
+
+                    picObstacle2.Visible = true;
+                    picObstacle2.Location = new Point(Co_ordinates[2], Co_ordinates[3]);
+                    picShoot2.Location = new Point(Co_OrdinatesShoot[2], Co_OrdinatesShoot[3]);
+                    break;
+
+                case 3:
+                    picObstacle1.Visible = true;
+                    picObstacle1.Location = new Point(Co_ordinates[0], Co_ordinates[1]);
+                    picShoot1.Location = new Point(Co_OrdinatesShoot[0], Co_OrdinatesShoot[1]);
+
+                    picObstacle2.Visible = true;
+                    picObstacle2.Location = new Point(Co_ordinates[2], Co_ordinates[3]);
+                    picShoot2.Location = new Point(Co_OrdinatesShoot[2], Co_OrdinatesShoot[3]);
+
+                    picObstacle3.Visible = true;
+                    picObstacle3.Location = new Point(Co_ordinates[4], Co_ordinates[5]);
+                    picShoot3.Location = new Point(Co_OrdinatesShoot[4], Co_OrdinatesShoot[5]);
+                    break;
+
+                case 4:
+                    picObstacle1.Visible = true;
+                    picObstacle1.Location = new Point(Co_ordinates[0], Co_ordinates[1]);
+                    picShoot1.Location = new Point(Co_OrdinatesShoot[0], Co_OrdinatesShoot[1]);
+
+                    picObstacle2.Visible = true;
+                    picObstacle2.Location = new Point(Co_ordinates[2], Co_ordinates[3]);
+                    picShoot2.Location = new Point(Co_OrdinatesShoot[3], Co_OrdinatesShoot[4]);
+
+                    picObstacle3.Visible = true;
+                    picObstacle3.Location = new Point(Co_ordinates[4], Co_ordinates[5]);
+                    picShoot3.Location = new Point(Co_OrdinatesShoot[4], Co_OrdinatesShoot[5]);
+
+                    picObstacle4.Visible = true;
+                    picObstacle4.Location = new Point(Co_ordinates[6], Co_ordinates[7]);
+                    picShoot4.Location = new Point(Co_OrdinatesShoot[6], Co_OrdinatesShoot[7]);
+
+                    break;
+
+                case 5:
+                    picObstacle1.Visible = true;
+                    picObstacle1.Location = new Point(Co_ordinates[0], Co_ordinates[1]);
+                    picShoot1.Location = new Point(Co_OrdinatesShoot[0], Co_OrdinatesShoot[1]);
+
+                    picObstacle2.Visible = true;
+                    picObstacle2.Location = new Point(Co_ordinates[2], Co_ordinates[3]);
+                    picShoot2.Location = new Point(Co_OrdinatesShoot[2], Co_OrdinatesShoot[3]);
+
+                    picObstacle3.Visible = true;
+                    picObstacle3.Location = new Point(Co_ordinates[4], Co_ordinates[5]);
+                    picShoot3.Location = new Point(Co_OrdinatesShoot[4], Co_OrdinatesShoot[5]);
+
+                    picObstacle4.Visible = true;
+                    picObstacle4.Location = new Point(Co_ordinates[6], Co_ordinates[7]);
+                    picShoot4.Location = new Point(Co_OrdinatesShoot[6], Co_OrdinatesShoot[7]);
+
+                    picObstacle5.Visible = true;
+                    picObstacle5.Location = new Point(Co_ordinates[8], Co_ordinates[9]);
+                    picShoot5.Location = new Point(Co_OrdinatesShoot[8], Co_OrdinatesShoot[9]);
+
+
+                    break;
+
+                default:
+                    break;
+
+                   
             }
-        }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
+            btnSetUpObstacles.Enabled = false;
 
         }
 
-        private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)
-            {
-                MouseDownLocation = e.Location;
-            }
-        }
+      
+     
 
-        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)
-            {
-                MouseDownLocation = e.Location;
-            }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btnProceedPlanView_Click(object sender, EventArgs e)
         {
             
+            timeShoot1.Interval = 2000;
+            timeShoot1.Start();
+           
+           
+           
         }
 
-        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        private void timeShoot1_Tick(object sender, EventArgs e)
         {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)
-            {
-                MouseDownLocation = e.Location;
-            }
-        }
+            int count = 0;
+            int YLocation = picShoot1.Location.Y;
 
-        private void pictureBox3_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)
-            {
-                pictureBox3.Left = e.X + pictureBox3.Left - MouseDownLocation.X;
-                pictureBox3.Top = e.Y + pictureBox3.Top - MouseDownLocation.Y;
-            }
-        }
+            picShoot1.Location = new Point(picShoot1.Location.X, picShoot1.Location.Y - 3);
+            count = count + 1;
 
-        private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            if (count == 10)
             {
-                pictureBox2.Left = e.X + pictureBox2.Left - MouseDownLocation.X;
-                pictureBox2.Top = e.Y + pictureBox2.Top - MouseDownLocation.Y;
+                picShoot1.Location = new Point(picShoot1.Location.X, Co_OrdinatesShoot[1]);
             }
-        }
-
-        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)
-            {
-                pictureBox1.Left = e.X + pictureBox1.Left - MouseDownLocation.X;
-                pictureBox1.Top = e.Y + pictureBox1.Top - MouseDownLocation.Y;
-            }
+            
+           
         }
 
         protected override void OnMouseMove(MouseEventArgs e)
