@@ -801,7 +801,7 @@
             this.btnSetUpObstacles.Name = "btnSetUpObstacles";
             this.btnSetUpObstacles.Size = new System.Drawing.Size(382, 41);
             this.btnSetUpObstacles.TabIndex = 30;
-            this.btnSetUpObstacles.Text = "Set Up Obstacles";
+            this.btnSetUpObstacles.Text = "Set Up Obstacle";
             this.btnSetUpObstacles.UseVisualStyleBackColor = true;
             this.btnSetUpObstacles.Click += new System.EventHandler(this.button3_Click);
             // 
