@@ -47,7 +47,13 @@ namespace FlightSimulator
 
         List<int> Co_OrdinatesShoot = new List<int>();
         int ShootYOne = 0;
-        
+        int ShootYTwo = 0;
+        int ShootYThree = 0;
+        int ShootYFour = 0;
+        int ShootYFive = 0;
+
+
+
         private void button3_Click(object sender, EventArgs e)
         {
             double NumberofObstacles = Convert.ToDouble(numudObstacles.Value);
@@ -117,6 +123,65 @@ namespace FlightSimulator
                 YCo_OrdinateShoot = 0;
             }
 
+            Thread shooter_1 = new Thread(delegate () {
+
+                ShootYOne = Co_OrdinatesShoot[1];
+                for (int i = 0; i < 10; i++)
+                {
+                    ShootYOne = ShootYOne - 3;
+                    ShootOne();
+                    Thread.Sleep(500);
+                }
+            });
+
+            Thread shooter_2 = new Thread(delegate () {
+
+                //ShootYTwo = Co_OrdinatesShoot[3];
+                for (int i = 0; i < 10; i++)
+                {
+                    ShootYTwo = ShootYTwo - 3;
+                    ShootTwo();
+                    Thread.Sleep(500);
+                }
+            });
+
+            Thread shooter_3 = new Thread(delegate () {
+
+                ShootYThree = Co_OrdinatesShoot[5];
+                for (int i = 0; i < 10; i++)
+                {
+                    ShootYThree = ShootYThree - 3;
+                    ShootThree();
+                    Thread.Sleep(500);
+                }
+            });
+
+            Thread shooter_4 = new Thread(delegate () {
+
+                ShootYFour = Co_OrdinatesShoot[7];
+                for (int i = 0; i < 10; i++)
+                {
+                    ShootYFour = ShootYFour - 3;
+                    ShootFour();
+                    Thread.Sleep(500);
+                }
+            });
+
+            Thread shooter_5 = new Thread(delegate () {
+                
+                ShootYFive = Co_OrdinatesShoot[9];
+                for ( int i = 0; i < 10; i++)
+                {
+                    ShootYFive = ShootYFive - 3;
+                    ShootFive();
+                    Thread.Sleep(500);
+                }
+            });
+
+
+
+
+
             switch (NumberofObstacles)
             {
                 case 1:
@@ -125,6 +190,8 @@ namespace FlightSimulator
                     picObstacle1.Location = new Point(Co_ordinates[0], Co_ordinates[1]);
 
                     picShoot1.Location = new Point(Co_OrdinatesShoot[0], Co_OrdinatesShoot[1]);
+                    picShoot1.Visible = true;
+                    shooter_1.Start();
                     break;
 
                 case 2:
@@ -135,6 +202,12 @@ namespace FlightSimulator
                     picObstacle2.Visible = true;
                     picObstacle2.Location = new Point(Co_ordinates[2], Co_ordinates[3]);
                     picShoot2.Location = new Point(Co_OrdinatesShoot[2], Co_OrdinatesShoot[3]);
+
+                    picShoot1.Visible = true;
+                    picShoot2.Visible = true;
+
+                    shooter_1.Start();
+                    shooter_2.Start();
                     break;
 
                 case 3:
@@ -149,6 +222,15 @@ namespace FlightSimulator
                     picObstacle3.Visible = true;
                     picObstacle3.Location = new Point(Co_ordinates[4], Co_ordinates[5]);
                     picShoot3.Location = new Point(Co_OrdinatesShoot[4], Co_OrdinatesShoot[5]);
+
+                    picShoot1.Visible = true;
+                    picShoot2.Visible = true;
+                    picShoot3.Visible = true;
+
+                    shooter_1.Start();
+                    shooter_2.Start();
+                    shooter_3.Start();
+
                     break;
 
                 case 4:
@@ -167,6 +249,17 @@ namespace FlightSimulator
                     picObstacle4.Visible = true;
                     picObstacle4.Location = new Point(Co_ordinates[6], Co_ordinates[7]);
                     picShoot4.Location = new Point(Co_OrdinatesShoot[6], Co_OrdinatesShoot[7]);
+
+                    picShoot1.Visible = true;
+                    picShoot2.Visible = true;
+                    picShoot3.Visible = true;
+                    picShoot4.Visible = true;
+
+                    shooter_1.Start();
+                    shooter_2.Start();
+                    shooter_3.Start();
+                    shooter_4.Start();
+
 
                     break;
 
@@ -191,6 +284,20 @@ namespace FlightSimulator
                     picObstacle5.Location = new Point(Co_ordinates[8], Co_ordinates[9]);
                     picShoot5.Location = new Point(Co_OrdinatesShoot[8], Co_OrdinatesShoot[9]);
 
+                    picShoot1.Visible = true;
+                    picShoot2.Visible = true;
+                    picShoot3.Visible = true;
+                    picShoot4.Visible = true;
+                    picShoot5.Visible = true;
+
+
+                    shooter_1.Start();
+                    shooter_2.Start();
+                    shooter_3.Start();
+                    shooter_4.Start();
+                    shooter_5.Start();
+
+
 
                     break;
 
@@ -204,14 +311,13 @@ namespace FlightSimulator
 
         }
 
-      
+       
      
 
         private void btnProceedPlanView_Click(object sender, EventArgs e)
         {
             
-            timeShoot1.Interval = 2000;
-            timeShoot1.Start();
+            
            
            
            
@@ -243,6 +349,87 @@ namespace FlightSimulator
             Location2.Location = new Point(x, y - Location2.Height);
             Location1.Text = x.ToString();
             Location2.Text = y.ToString();
+        }
+
+        public delegate void Action();
+
+        public void ShootOne()
+        {
+            if (this.picShoot1.InvokeRequired)
+            {
+                Action act = new Action(ShootOne);
+                this.Invoke(act);
+            }
+            else
+            {
+
+                this.picShoot1.Location = new Point(Co_OrdinatesShoot[0], ShootYOne );
+      
+            }
+        }
+
+
+        public void ShootTwo()
+        {
+            if (this.picShoot2.InvokeRequired)
+            {
+                Action act = new Action(ShootTwo);
+                this.Invoke(act);
+            }
+            else
+            {
+
+                this.picShoot2.Location = new Point(Co_OrdinatesShoot[2], ShootYTwo);
+
+            }
+        }
+
+
+        public void ShootThree()
+        {
+            if (this.picShoot3.InvokeRequired)
+            {
+                Action act = new Action(ShootThree);
+                this.Invoke(act);
+            }
+            else
+            {
+
+                this.picShoot3.Location = new Point(Co_OrdinatesShoot[4], ShootYThree);
+
+            }
+        }
+
+
+        public void ShootFour()
+        {
+            if (this.picShoot4.InvokeRequired)
+            {
+                Action act = new Action(ShootFour);
+                this.Invoke(act);
+            }
+            else
+            {
+
+                this.picShoot4.Location = new Point(Co_OrdinatesShoot[6], ShootYFour);
+
+            }
+        }
+
+
+        public void ShootFive()
+        {
+            if (this.picShoot5.InvokeRequired)
+            {
+                Action act = new Action(ShootFive);
+                this.Invoke(act);
+            }
+            else
+            {
+
+                this.picShoot5.Location = new Point(Co_OrdinatesShoot[8], ShootYFive);
+
+            }
         }
     }
 }

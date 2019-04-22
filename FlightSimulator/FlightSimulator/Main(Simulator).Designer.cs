@@ -150,19 +150,20 @@
             // picPlaneMap
             // 
             this.picPlaneMap.BackColor = System.Drawing.Color.MediumBlue;
-            this.picPlaneMap.Location = new System.Drawing.Point(808, 677);
-            this.picPlaneMap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picPlaneMap.Location = new System.Drawing.Point(606, 550);
+            this.picPlaneMap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picPlaneMap.Name = "picPlaneMap";
-            this.picPlaneMap.Size = new System.Drawing.Size(19, 18);
+            this.picPlaneMap.Size = new System.Drawing.Size(14, 15);
             this.picPlaneMap.TabIndex = 7;
             this.picPlaneMap.TabStop = false;
             // 
             // lblPlaneShow
             // 
             this.lblPlaneShow.AutoSize = true;
-            this.lblPlaneShow.Location = new System.Drawing.Point(747, 699);
+            this.lblPlaneShow.Location = new System.Drawing.Point(560, 568);
+            this.lblPlaneShow.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPlaneShow.Name = "lblPlaneShow";
-            this.lblPlaneShow.Size = new System.Drawing.Size(97, 17);
+            this.lblPlaneShow.Size = new System.Drawing.Size(76, 13);
             this.lblPlaneShow.TabIndex = 8;
             this.lblPlaneShow.Text = "YOUR PLANE";
             // 
@@ -174,8 +175,9 @@
             // 
             this.Location2.AutoSize = true;
             this.Location2.Location = new System.Drawing.Point(0, 0);
+            this.Location2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Location2.Name = "Location2";
-            this.Location2.Size = new System.Drawing.Size(16, 17);
+            this.Location2.Size = new System.Drawing.Size(13, 13);
             this.Location2.TabIndex = 9;
             this.Location2.Text = "0";
             // 
@@ -183,17 +185,17 @@
             // 
             this.Location1.AutoSize = true;
             this.Location1.Location = new System.Drawing.Point(0, 0);
+            this.Location1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Location1.Name = "Location1";
-            this.Location1.Size = new System.Drawing.Size(16, 17);
+            this.Location1.Size = new System.Drawing.Size(13, 13);
             this.Location1.TabIndex = 10;
             this.Location1.Text = "0";
             // 
             // tabPage5
             // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(563, 988);
+            this.tabPage5.Size = new System.Drawing.Size(420, 800);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -206,10 +208,9 @@
             this.tabPage4.Controls.Add(this.groupBox4);
             this.tabPage4.Controls.Add(this.groupBox3);
             this.tabPage4.Controls.Add(this.groupBox1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(563, 988);
+            this.tabPage4.Size = new System.Drawing.Size(420, 800);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Constraints";
             // 
@@ -221,66 +222,58 @@
             this.groupBox7.Controls.Add(this.label23);
             this.groupBox7.Controls.Add(this.label18);
             this.groupBox7.Controls.Add(this.label16);
-            this.groupBox7.Location = new System.Drawing.Point(53, 577);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox7.Location = new System.Drawing.Point(40, 469);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox7.Size = new System.Drawing.Size(441, 159);
+            this.groupBox7.Size = new System.Drawing.Size(331, 129);
             this.groupBox7.TabIndex = 12;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Jet Constraints";
             // 
             // txtJetAltitude
             // 
-            this.txtJetAltitude.Location = new System.Drawing.Point(129, 116);
-            this.txtJetAltitude.Margin = new System.Windows.Forms.Padding(4);
+            this.txtJetAltitude.Location = new System.Drawing.Point(97, 94);
             this.txtJetAltitude.Name = "txtJetAltitude";
-            this.txtJetAltitude.Size = new System.Drawing.Size(131, 22);
+            this.txtJetAltitude.Size = new System.Drawing.Size(99, 20);
             this.txtJetAltitude.TabIndex = 5;
             // 
             // txtFuelLeft
             // 
-            this.txtFuelLeft.Location = new System.Drawing.Point(129, 76);
-            this.txtFuelLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFuelLeft.Location = new System.Drawing.Point(97, 62);
             this.txtFuelLeft.Name = "txtFuelLeft";
-            this.txtFuelLeft.Size = new System.Drawing.Size(131, 22);
+            this.txtFuelLeft.Size = new System.Drawing.Size(99, 20);
             this.txtFuelLeft.TabIndex = 4;
             // 
             // txtCargoWeight
             // 
-            this.txtCargoWeight.Location = new System.Drawing.Point(131, 30);
-            this.txtCargoWeight.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCargoWeight.Location = new System.Drawing.Point(98, 24);
             this.txtCargoWeight.Name = "txtCargoWeight";
-            this.txtCargoWeight.Size = new System.Drawing.Size(131, 22);
+            this.txtCargoWeight.Size = new System.Drawing.Size(99, 20);
             this.txtCargoWeight.TabIndex = 3;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(15, 76);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Location = new System.Drawing.Point(11, 62);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(99, 17);
+            this.label23.Size = new System.Drawing.Size(75, 13);
             this.label23.TabIndex = 2;
             this.label23.Text = "Amount of fuel";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(27, 119);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(20, 97);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(55, 17);
+            this.label18.Size = new System.Drawing.Size(42, 13);
             this.label18.TabIndex = 1;
             this.label18.Text = "Altitude";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(19, 30);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(14, 24);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(94, 17);
+            this.label16.Size = new System.Drawing.Size(72, 13);
             this.label16.TabIndex = 0;
             this.label16.Text = "Cargo Weight";
             // 
@@ -290,48 +283,42 @@
             this.groupBox5.Controls.Add(this.X_obstical4);
             this.groupBox5.Controls.Add(this.label8);
             this.groupBox5.Controls.Add(this.label15);
-            this.groupBox5.Location = new System.Drawing.Point(53, 451);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Location = new System.Drawing.Point(40, 366);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(441, 118);
+            this.groupBox5.Size = new System.Drawing.Size(331, 96);
             this.groupBox5.TabIndex = 11;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Coordinates of obstacle 4";
             // 
             // Y_obstical4
             // 
-            this.Y_obstical4.Location = new System.Drawing.Point(129, 66);
-            this.Y_obstical4.Margin = new System.Windows.Forms.Padding(4);
+            this.Y_obstical4.Location = new System.Drawing.Point(97, 54);
             this.Y_obstical4.Name = "Y_obstical4";
-            this.Y_obstical4.Size = new System.Drawing.Size(132, 22);
+            this.Y_obstical4.Size = new System.Drawing.Size(100, 20);
             this.Y_obstical4.TabIndex = 7;
             // 
             // X_obstical4
             // 
-            this.X_obstical4.Location = new System.Drawing.Point(129, 30);
-            this.X_obstical4.Margin = new System.Windows.Forms.Padding(4);
+            this.X_obstical4.Location = new System.Drawing.Point(97, 24);
             this.X_obstical4.Name = "X_obstical4";
-            this.X_obstical4.Size = new System.Drawing.Size(132, 22);
+            this.X_obstical4.Size = new System.Drawing.Size(100, 20);
             this.X_obstical4.TabIndex = 6;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(32, 70);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(24, 57);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 17);
+            this.label8.Size = new System.Drawing.Size(73, 13);
             this.label8.TabIndex = 5;
             this.label8.Text = "Y coordinate :";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(32, 33);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(24, 27);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(96, 17);
+            this.label15.Size = new System.Drawing.Size(73, 13);
             this.label15.TabIndex = 4;
             this.label15.Text = "X coordinate :";
             // 
@@ -341,48 +328,42 @@
             this.groupBox4.Controls.Add(this.X_obstical3);
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Location = new System.Drawing.Point(53, 299);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Location = new System.Drawing.Point(40, 243);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(441, 118);
+            this.groupBox4.Size = new System.Drawing.Size(331, 96);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Coordinates of obstacle 3";
             // 
             // Y_obstical3
             // 
-            this.Y_obstical3.Location = new System.Drawing.Point(129, 71);
-            this.Y_obstical3.Margin = new System.Windows.Forms.Padding(4);
+            this.Y_obstical3.Location = new System.Drawing.Point(97, 58);
             this.Y_obstical3.Name = "Y_obstical3";
-            this.Y_obstical3.Size = new System.Drawing.Size(132, 22);
+            this.Y_obstical3.Size = new System.Drawing.Size(100, 20);
             this.Y_obstical3.TabIndex = 7;
             // 
             // X_obstical3
             // 
-            this.X_obstical3.Location = new System.Drawing.Point(129, 34);
-            this.X_obstical3.Margin = new System.Windows.Forms.Padding(4);
+            this.X_obstical3.Location = new System.Drawing.Point(97, 28);
             this.X_obstical3.Name = "X_obstical3";
-            this.X_obstical3.Size = new System.Drawing.Size(132, 22);
+            this.X_obstical3.Size = new System.Drawing.Size(100, 20);
             this.X_obstical3.TabIndex = 6;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(32, 75);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(24, 61);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 17);
+            this.label6.Size = new System.Drawing.Size(73, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "Y coordinate :";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(32, 38);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(24, 31);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 17);
+            this.label7.Size = new System.Drawing.Size(73, 13);
             this.label7.TabIndex = 4;
             this.label7.Text = "X coordinate :";
             // 
@@ -392,48 +373,42 @@
             this.groupBox3.Controls.Add(this.X_obstical2);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(53, 163);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(40, 132);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(441, 118);
+            this.groupBox3.Size = new System.Drawing.Size(331, 96);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Coordinates of obstacle 2";
             // 
             // Y_obstical2
             // 
-            this.Y_obstical2.Location = new System.Drawing.Point(129, 68);
-            this.Y_obstical2.Margin = new System.Windows.Forms.Padding(4);
+            this.Y_obstical2.Location = new System.Drawing.Point(97, 55);
             this.Y_obstical2.Name = "Y_obstical2";
-            this.Y_obstical2.Size = new System.Drawing.Size(132, 22);
+            this.Y_obstical2.Size = new System.Drawing.Size(100, 20);
             this.Y_obstical2.TabIndex = 7;
             // 
             // X_obstical2
             // 
-            this.X_obstical2.Location = new System.Drawing.Point(129, 31);
-            this.X_obstical2.Margin = new System.Windows.Forms.Padding(4);
+            this.X_obstical2.Location = new System.Drawing.Point(97, 25);
             this.X_obstical2.Name = "X_obstical2";
-            this.X_obstical2.Size = new System.Drawing.Size(132, 22);
+            this.X_obstical2.Size = new System.Drawing.Size(100, 20);
             this.X_obstical2.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 71);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(24, 58);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 17);
+            this.label4.Size = new System.Drawing.Size(73, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Y coordinate :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 34);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(24, 28);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 17);
+            this.label5.Size = new System.Drawing.Size(73, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "X coordinate :";
             // 
@@ -443,48 +418,42 @@
             this.groupBox1.Controls.Add(this.X_Obsticle1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(53, 37);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(40, 30);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(441, 118);
+            this.groupBox1.Size = new System.Drawing.Size(331, 96);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Coordinates of obstacle 1";
             // 
             // Y_obstical1
             // 
-            this.Y_obstical1.Location = new System.Drawing.Point(115, 66);
-            this.Y_obstical1.Margin = new System.Windows.Forms.Padding(4);
+            this.Y_obstical1.Location = new System.Drawing.Point(86, 54);
             this.Y_obstical1.Name = "Y_obstical1";
-            this.Y_obstical1.Size = new System.Drawing.Size(132, 22);
+            this.Y_obstical1.Size = new System.Drawing.Size(100, 20);
             this.Y_obstical1.TabIndex = 3;
             // 
             // X_Obsticle1
             // 
-            this.X_Obsticle1.Location = new System.Drawing.Point(115, 30);
-            this.X_Obsticle1.Margin = new System.Windows.Forms.Padding(4);
+            this.X_Obsticle1.Location = new System.Drawing.Point(86, 24);
             this.X_Obsticle1.Name = "X_Obsticle1";
-            this.X_Obsticle1.Size = new System.Drawing.Size(132, 22);
+            this.X_Obsticle1.Size = new System.Drawing.Size(100, 20);
             this.X_Obsticle1.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 70);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(13, 57);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 17);
+            this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Y coordinate :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 33);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(13, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 17);
+            this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "X coordinate :";
             // 
@@ -493,11 +462,10 @@
             this.tabPage2.BackColor = System.Drawing.Color.DarkSlateGray;
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(563, 988);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(420, 800);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Plane specification";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
@@ -505,10 +473,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(175, 572);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(131, 465);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(251, 54);
+            this.button2.Size = new System.Drawing.Size(188, 44);
             this.button2.TabIndex = 12;
             this.button2.Text = "PROCEED";
             this.button2.UseVisualStyleBackColor = true;
@@ -529,19 +497,17 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Location = new System.Drawing.Point(8, 30);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(6, 24);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(568, 458);
+            this.groupBox2.Size = new System.Drawing.Size(426, 372);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Plane specs";
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(348, 374);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numericUpDown1.Location = new System.Drawing.Point(261, 304);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -553,7 +519,7 @@
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(167, 22);
+            this.numericUpDown1.Size = new System.Drawing.Size(125, 20);
             this.numericUpDown1.TabIndex = 15;
             this.numericUpDown1.Value = new decimal(new int[] {
             100,
@@ -568,10 +534,10 @@
             "45000",
             "50000",
             "55000"});
-            this.comboBox2.Location = new System.Drawing.Point(348, 313);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox2.Location = new System.Drawing.Point(261, 254);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(167, 24);
+            this.comboBox2.Size = new System.Drawing.Size(126, 21);
             this.comboBox2.TabIndex = 14;
             // 
             // cmbWeight
@@ -581,10 +547,10 @@
             "100000",
             "200000",
             "300000"});
-            this.cmbWeight.Location = new System.Drawing.Point(348, 187);
-            this.cmbWeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbWeight.Location = new System.Drawing.Point(261, 152);
+            this.cmbWeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbWeight.Name = "cmbWeight";
-            this.cmbWeight.Size = new System.Drawing.Size(167, 24);
+            this.cmbWeight.Size = new System.Drawing.Size(126, 21);
             this.cmbWeight.TabIndex = 13;
             // 
             // label17
@@ -592,48 +558,43 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(19, 367);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(14, 298);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(150, 28);
+            this.label17.Size = new System.Drawing.Size(120, 22);
             this.label17.TabIndex = 11;
             this.label17.Text = "Top Speed :";
             // 
             // txtPlaneName
             // 
-            this.txtPlaneName.Location = new System.Drawing.Point(348, 78);
-            this.txtPlaneName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPlaneName.Location = new System.Drawing.Point(261, 63);
             this.txtPlaneName.Name = "txtPlaneName";
-            this.txtPlaneName.Size = new System.Drawing.Size(167, 22);
+            this.txtPlaneName.Size = new System.Drawing.Size(126, 20);
             this.txtPlaneName.TabIndex = 10;
             // 
             // txtPlaneTankSize
             // 
             this.txtPlaneTankSize.Enabled = false;
-            this.txtPlaneTankSize.Location = new System.Drawing.Point(348, 254);
-            this.txtPlaneTankSize.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPlaneTankSize.Location = new System.Drawing.Point(261, 206);
             this.txtPlaneTankSize.Name = "txtPlaneTankSize";
-            this.txtPlaneTankSize.Size = new System.Drawing.Size(167, 22);
+            this.txtPlaneTankSize.Size = new System.Drawing.Size(126, 20);
             this.txtPlaneTankSize.TabIndex = 8;
             this.txtPlaneTankSize.Text = "10000\r\n";
             // 
             // txtPlaneModel
             // 
             this.txtPlaneModel.Enabled = false;
-            this.txtPlaneModel.Location = new System.Drawing.Point(348, 130);
-            this.txtPlaneModel.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPlaneModel.Location = new System.Drawing.Point(261, 106);
             this.txtPlaneModel.Name = "txtPlaneModel";
-            this.txtPlaneModel.Size = new System.Drawing.Size(167, 22);
+            this.txtPlaneModel.Size = new System.Drawing.Size(126, 20);
             this.txtPlaneModel.TabIndex = 6;
             this.txtPlaneModel.Text = "AirCraftShooter";
             // 
             // txtPlaneID
             // 
             this.txtPlaneID.Enabled = false;
-            this.txtPlaneID.Location = new System.Drawing.Point(348, 30);
-            this.txtPlaneID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPlaneID.Location = new System.Drawing.Point(261, 24);
             this.txtPlaneID.Name = "txtPlaneID";
-            this.txtPlaneID.Size = new System.Drawing.Size(167, 22);
+            this.txtPlaneID.Size = new System.Drawing.Size(126, 20);
             this.txtPlaneID.TabIndex = 5;
             this.txtPlaneID.Text = "1";
             // 
@@ -642,10 +603,9 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(17, 247);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(13, 201);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(303, 28);
+            this.label14.Size = new System.Drawing.Size(239, 22);
             this.label14.TabIndex = 4;
             this.label14.Text = "Fuel Tank Size (in litres): ";
             // 
@@ -654,10 +614,9 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(19, 306);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(14, 249);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(322, 28);
+            this.label13.Size = new System.Drawing.Size(256, 22);
             this.label13.TabIndex = 3;
             this.label13.Text = "Max Cargo Weight  (in kg): ";
             // 
@@ -666,10 +625,9 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(19, 181);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(14, 147);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(171, 28);
+            this.label9.Size = new System.Drawing.Size(137, 22);
             this.label9.TabIndex = 2;
             this.label9.Text = "Weight (in kg)";
             // 
@@ -678,10 +636,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(19, 71);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(14, 58);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(164, 28);
+            this.label10.Size = new System.Drawing.Size(130, 22);
             this.label10.TabIndex = 1;
             this.label10.Text = "Plane Name :";
             // 
@@ -690,10 +647,9 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(17, 126);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(13, 102);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(167, 28);
+            this.label11.Size = new System.Drawing.Size(132, 22);
             this.label11.TabIndex = 1;
             this.label11.Text = "Plane Model :";
             // 
@@ -702,10 +658,9 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(19, 23);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(14, 19);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(123, 28);
+            this.label12.Size = new System.Drawing.Size(97, 22);
             this.label12.TabIndex = 0;
             this.label12.Text = "Plane ID :";
             // 
@@ -716,21 +671,20 @@
             this.tabPlaneView.Controls.Add(this.label1);
             this.tabPlaneView.Controls.Add(this.lblJetSee);
             this.tabPlaneView.Controls.Add(this.pictureBox8);
-            this.tabPlaneView.Location = new System.Drawing.Point(4, 25);
-            this.tabPlaneView.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPlaneView.Location = new System.Drawing.Point(4, 22);
             this.tabPlaneView.Name = "tabPlaneView";
-            this.tabPlaneView.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPlaneView.Size = new System.Drawing.Size(563, 988);
+            this.tabPlaneView.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPlaneView.Size = new System.Drawing.Size(420, 800);
             this.tabPlaneView.TabIndex = 0;
             this.tabPlaneView.Text = "Plane View";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(172, 463);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(129, 376);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(251, 54);
+            this.button1.Size = new System.Drawing.Size(188, 44);
             this.button1.TabIndex = 11;
             this.button1.Text = "PROCEED";
             this.button1.UseVisualStyleBackColor = true;
@@ -741,9 +695,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(145, 366);
+            this.label1.Location = new System.Drawing.Point(109, 297);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 50);
+            this.label1.Size = new System.Drawing.Size(244, 40);
             this.label1.TabIndex = 10;
             this.label1.Text = "JET 766EEE1";
             // 
@@ -752,9 +707,10 @@
             this.lblJetSee.AutoSize = true;
             this.lblJetSee.Font = new System.Drawing.Font("Arial Rounded MT Bold", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJetSee.ForeColor = System.Drawing.Color.White;
-            this.lblJetSee.Location = new System.Drawing.Point(183, 42);
+            this.lblJetSee.Location = new System.Drawing.Point(137, 34);
+            this.lblJetSee.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblJetSee.Name = "lblJetSee";
-            this.lblJetSee.Size = new System.Drawing.Size(239, 50);
+            this.lblJetSee.Size = new System.Drawing.Size(193, 40);
             this.lblJetSee.TabIndex = 9;
             this.lblJetSee.Text = "YOUR JET";
             // 
@@ -762,10 +718,9 @@
             // 
             this.pictureBox8.BackgroundImage = global::FlightSimulator.Properties.Resources.Webp_net_resizeimage__2_;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox8.Location = new System.Drawing.Point(21, 121);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Location = new System.Drawing.Point(16, 98);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(543, 218);
+            this.pictureBox8.Size = new System.Drawing.Size(407, 177);
             this.pictureBox8.TabIndex = 8;
             this.pictureBox8.TabStop = false;
             // 
@@ -776,19 +731,19 @@
             this.tabPage3.Controls.Add(this.btnSetUpObstacles);
             this.tabPage3.Controls.Add(this.numudObstacles);
             this.tabPage3.Controls.Add(this.label24);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(563, 988);
+            this.tabPage3.Size = new System.Drawing.Size(420, 800);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Obstacles";
             // 
             // btnProceedPlanView
             // 
             this.btnProceedPlanView.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProceedPlanView.Location = new System.Drawing.Point(99, 348);
+            this.btnProceedPlanView.Location = new System.Drawing.Point(74, 283);
+            this.btnProceedPlanView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnProceedPlanView.Name = "btnProceedPlanView";
-            this.btnProceedPlanView.Size = new System.Drawing.Size(382, 41);
+            this.btnProceedPlanView.Size = new System.Drawing.Size(286, 33);
             this.btnProceedPlanView.TabIndex = 31;
             this.btnProceedPlanView.Text = "PROCEED";
             this.btnProceedPlanView.UseVisualStyleBackColor = true;
@@ -797,9 +752,10 @@
             // btnSetUpObstacles
             // 
             this.btnSetUpObstacles.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetUpObstacles.Location = new System.Drawing.Point(99, 106);
+            this.btnSetUpObstacles.Location = new System.Drawing.Point(74, 86);
+            this.btnSetUpObstacles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSetUpObstacles.Name = "btnSetUpObstacles";
-            this.btnSetUpObstacles.Size = new System.Drawing.Size(382, 41);
+            this.btnSetUpObstacles.Size = new System.Drawing.Size(286, 33);
             this.btnSetUpObstacles.TabIndex = 30;
             this.btnSetUpObstacles.Text = "Set Up Obstacles";
             this.btnSetUpObstacles.UseVisualStyleBackColor = true;
@@ -807,7 +763,8 @@
             // 
             // numudObstacles
             // 
-            this.numudObstacles.Location = new System.Drawing.Point(141, 78);
+            this.numudObstacles.Location = new System.Drawing.Point(106, 63);
+            this.numudObstacles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numudObstacles.Maximum = new decimal(new int[] {
             5,
             0,
@@ -819,7 +776,7 @@
             0,
             0});
             this.numudObstacles.Name = "numudObstacles";
-            this.numudObstacles.Size = new System.Drawing.Size(303, 22);
+            this.numudObstacles.Size = new System.Drawing.Size(227, 20);
             this.numudObstacles.TabIndex = 11;
             this.numudObstacles.Value = new decimal(new int[] {
             1,
@@ -832,10 +789,9 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(53, 26);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Location = new System.Drawing.Point(40, 21);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(475, 32);
+            this.label24.Size = new System.Drawing.Size(376, 26);
             this.label24.TabIndex = 29;
             this.label24.Text = "HOW MANY OBSTACLES (MAX: 5)";
             // 
@@ -846,64 +802,69 @@
             this.tabPlane.Controls.Add(this.tabPage2);
             this.tabPlane.Controls.Add(this.tabPage4);
             this.tabPlane.Controls.Add(this.tabPage5);
-            this.tabPlane.Location = new System.Drawing.Point(851, 0);
-            this.tabPlane.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPlane.Location = new System.Drawing.Point(638, 0);
             this.tabPlane.Name = "tabPlane";
             this.tabPlane.SelectedIndex = 0;
-            this.tabPlane.Size = new System.Drawing.Size(571, 1017);
+            this.tabPlane.Size = new System.Drawing.Size(428, 826);
             this.tabPlane.TabIndex = 6;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Location = new System.Drawing.Point(79, 84);
+            this.pictureBox1.Location = new System.Drawing.Point(59, 68);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(53, 41);
+            this.pictureBox1.Size = new System.Drawing.Size(40, 33);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Black;
-            this.pictureBox4.Location = new System.Drawing.Point(243, 170);
+            this.pictureBox4.Location = new System.Drawing.Point(182, 138);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(29, 34);
+            this.pictureBox4.Size = new System.Drawing.Size(22, 28);
             this.pictureBox4.TabIndex = 14;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Black;
-            this.pictureBox5.Location = new System.Drawing.Point(494, 25);
+            this.pictureBox5.Location = new System.Drawing.Point(370, 20);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(36, 26);
+            this.pictureBox5.Size = new System.Drawing.Size(27, 21);
             this.pictureBox5.TabIndex = 15;
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Black;
-            this.pictureBox6.Location = new System.Drawing.Point(46, 194);
+            this.pictureBox6.Location = new System.Drawing.Point(34, 158);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(105, 19);
+            this.pictureBox6.Size = new System.Drawing.Size(79, 15);
             this.pictureBox6.TabIndex = 16;
             this.pictureBox6.TabStop = false;
             // 
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Black;
-            this.pictureBox7.Location = new System.Drawing.Point(366, 51);
+            this.pictureBox7.Location = new System.Drawing.Point(274, 41);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(25, 46);
+            this.pictureBox7.Size = new System.Drawing.Size(19, 37);
             this.pictureBox7.TabIndex = 17;
             this.pictureBox7.TabStop = false;
             // 
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Black;
-            this.pictureBox9.Location = new System.Drawing.Point(243, 94);
+            this.pictureBox9.Location = new System.Drawing.Point(182, 76);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(17, 15);
+            this.pictureBox9.Size = new System.Drawing.Size(13, 12);
             this.pictureBox9.TabIndex = 18;
             this.pictureBox9.TabStop = false;
             // 
@@ -912,10 +873,9 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(479, 54);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(359, 44);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(70, 16);
+            this.label19.Size = new System.Drawing.Size(56, 12);
             this.label19.TabIndex = 31;
             this.label19.Text = "Barracks";
             // 
@@ -924,10 +884,9 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(225, 207);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(169, 168);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(83, 16);
+            this.label20.Size = new System.Drawing.Size(66, 12);
             this.label20.TabIndex = 32;
             this.label20.Text = "Post Office";
             // 
@@ -936,10 +895,9 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(43, 216);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(32, 176);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(113, 16);
+            this.label21.Size = new System.Drawing.Size(92, 12);
             this.label21.TabIndex = 33;
             this.label21.Text = "Office Quarters";
             // 
@@ -948,10 +906,9 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(220, 112);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Location = new System.Drawing.Point(165, 91);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(75, 16);
+            this.label22.Size = new System.Drawing.Size(57, 12);
             this.label22.TabIndex = 34;
             this.label22.Text = "Mess Hall";
             // 
@@ -960,10 +917,9 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(74, 128);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Location = new System.Drawing.Point(56, 104);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(58, 16);
+            this.label25.Size = new System.Drawing.Size(46, 12);
             this.label25.TabIndex = 35;
             this.label25.Text = "Armory";
             // 
@@ -972,19 +928,19 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(343, 100);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Location = new System.Drawing.Point(257, 81);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(65, 16);
+            this.label26.Size = new System.Drawing.Size(50, 12);
             this.label26.TabIndex = 36;
             this.label26.Text = "Hospital";
             // 
             // picObstacle1
             // 
             this.picObstacle1.BackColor = System.Drawing.Color.Red;
-            this.picObstacle1.Location = new System.Drawing.Point(240, 425);
+            this.picObstacle1.Location = new System.Drawing.Point(180, 345);
+            this.picObstacle1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picObstacle1.Name = "picObstacle1";
-            this.picObstacle1.Size = new System.Drawing.Size(20, 18);
+            this.picObstacle1.Size = new System.Drawing.Size(15, 15);
             this.picObstacle1.TabIndex = 37;
             this.picObstacle1.TabStop = false;
             this.picObstacle1.Visible = false;
@@ -992,9 +948,10 @@
             // picObstacle4
             // 
             this.picObstacle4.BackColor = System.Drawing.Color.Red;
-            this.picObstacle4.Location = new System.Drawing.Point(603, 373);
+            this.picObstacle4.Location = new System.Drawing.Point(452, 303);
+            this.picObstacle4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picObstacle4.Name = "picObstacle4";
-            this.picObstacle4.Size = new System.Drawing.Size(20, 18);
+            this.picObstacle4.Size = new System.Drawing.Size(15, 15);
             this.picObstacle4.TabIndex = 38;
             this.picObstacle4.TabStop = false;
             this.picObstacle4.Visible = false;
@@ -1002,9 +959,10 @@
             // picObstacle3
             // 
             this.picObstacle3.BackColor = System.Drawing.Color.Red;
-            this.picObstacle3.Location = new System.Drawing.Point(482, 304);
+            this.picObstacle3.Location = new System.Drawing.Point(362, 247);
+            this.picObstacle3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picObstacle3.Name = "picObstacle3";
-            this.picObstacle3.Size = new System.Drawing.Size(20, 18);
+            this.picObstacle3.Size = new System.Drawing.Size(15, 15);
             this.picObstacle3.TabIndex = 39;
             this.picObstacle3.TabStop = false;
             this.picObstacle3.Visible = false;
@@ -1012,9 +970,10 @@
             // picObstacle2
             // 
             this.picObstacle2.BackColor = System.Drawing.Color.Red;
-            this.picObstacle2.Location = new System.Drawing.Point(482, 442);
+            this.picObstacle2.Location = new System.Drawing.Point(362, 359);
+            this.picObstacle2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picObstacle2.Name = "picObstacle2";
-            this.picObstacle2.Size = new System.Drawing.Size(20, 18);
+            this.picObstacle2.Size = new System.Drawing.Size(15, 15);
             this.picObstacle2.TabIndex = 40;
             this.picObstacle2.TabStop = false;
             this.picObstacle2.Visible = false;
@@ -1022,9 +981,10 @@
             // picObstacle5
             // 
             this.picObstacle5.BackColor = System.Drawing.Color.Red;
-            this.picObstacle5.Location = new System.Drawing.Point(705, 276);
+            this.picObstacle5.Location = new System.Drawing.Point(529, 224);
+            this.picObstacle5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picObstacle5.Name = "picObstacle5";
-            this.picObstacle5.Size = new System.Drawing.Size(20, 18);
+            this.picObstacle5.Size = new System.Drawing.Size(15, 15);
             this.picObstacle5.TabIndex = 41;
             this.picObstacle5.TabStop = false;
             this.picObstacle5.Visible = false;
@@ -1032,18 +992,21 @@
             // picShoot1
             // 
             this.picShoot1.BackColor = System.Drawing.Color.Gold;
-            this.picShoot1.Location = new System.Drawing.Point(243, 415);
+            this.picShoot1.Location = new System.Drawing.Point(182, 337);
+            this.picShoot1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picShoot1.Name = "picShoot1";
-            this.picShoot1.Size = new System.Drawing.Size(10, 13);
+            this.picShoot1.Size = new System.Drawing.Size(8, 11);
             this.picShoot1.TabIndex = 42;
             this.picShoot1.TabStop = false;
+            this.picShoot1.Visible = false;
             // 
             // picShoot4
             // 
             this.picShoot4.BackColor = System.Drawing.Color.Gold;
-            this.picShoot4.Location = new System.Drawing.Point(703, 355);
+            this.picShoot4.Location = new System.Drawing.Point(527, 288);
+            this.picShoot4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picShoot4.Name = "picShoot4";
-            this.picShoot4.Size = new System.Drawing.Size(10, 13);
+            this.picShoot4.Size = new System.Drawing.Size(8, 11);
             this.picShoot4.TabIndex = 43;
             this.picShoot4.TabStop = false;
             this.picShoot4.Visible = false;
@@ -1051,9 +1014,10 @@
             // picShoot3
             // 
             this.picShoot3.BackColor = System.Drawing.Color.Gold;
-            this.picShoot3.Location = new System.Drawing.Point(711, 363);
+            this.picShoot3.Location = new System.Drawing.Point(533, 295);
+            this.picShoot3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picShoot3.Name = "picShoot3";
-            this.picShoot3.Size = new System.Drawing.Size(10, 13);
+            this.picShoot3.Size = new System.Drawing.Size(8, 11);
             this.picShoot3.TabIndex = 44;
             this.picShoot3.TabStop = false;
             this.picShoot3.Visible = false;
@@ -1061,9 +1025,10 @@
             // picShoot2
             // 
             this.picShoot2.BackColor = System.Drawing.Color.Gold;
-            this.picShoot2.Location = new System.Drawing.Point(482, 429);
+            this.picShoot2.Location = new System.Drawing.Point(362, 349);
+            this.picShoot2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picShoot2.Name = "picShoot2";
-            this.picShoot2.Size = new System.Drawing.Size(10, 13);
+            this.picShoot2.Size = new System.Drawing.Size(8, 11);
             this.picShoot2.TabIndex = 45;
             this.picShoot2.TabStop = false;
             this.picShoot2.Visible = false;
@@ -1071,9 +1036,10 @@
             // picShoot5
             // 
             this.picShoot5.BackColor = System.Drawing.Color.Gold;
-            this.picShoot5.Location = new System.Drawing.Point(711, 257);
+            this.picShoot5.Location = new System.Drawing.Point(533, 209);
+            this.picShoot5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picShoot5.Name = "picShoot5";
-            this.picShoot5.Size = new System.Drawing.Size(10, 13);
+            this.picShoot5.Size = new System.Drawing.Size(8, 11);
             this.picShoot5.TabIndex = 46;
             this.picShoot5.TabStop = false;
             this.picShoot5.Visible = false;
@@ -1084,11 +1050,11 @@
             // 
             // Main_Simulator_
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FlightSimulator.Properties.Resources.political_map_of_jutai_physical_outside;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1416, 723);
+            this.ClientSize = new System.Drawing.Size(1028, 587);
             this.Controls.Add(this.picShoot5);
             this.Controls.Add(this.picShoot2);
             this.Controls.Add(this.picShoot3);
@@ -1116,7 +1082,6 @@
             this.Controls.Add(this.Location2);
             this.Controls.Add(this.lblPlaneShow);
             this.Controls.Add(this.picPlaneMap);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Main_Simulator_";
             this.Text = "Main_Simulator_";
             this.Load += new System.EventHandler(this.Main_Simulator__Load);
