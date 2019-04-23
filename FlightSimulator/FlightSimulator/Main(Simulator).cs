@@ -17,7 +17,7 @@ namespace FlightSimulator
         public Main_Simulator_()
         {
             InitializeComponent();
-           
+
 
         }
 
@@ -28,17 +28,16 @@ namespace FlightSimulator
 
         }
 
-        int movePlaneX, cnt = 0;
-        float movePlaneY = 1f;
+
 
         private void timePlaneMove_Tick(object sender, EventArgs e)
         {
-            picPlaneMap.Location = new Point(picPlaneMap.Location.X - 3, picPlaneMap.Location.Y);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            tabPlane.SelectedTab = tabPage2;
+            tabPlane.SelectedTab = tabPlaneSpecs;
         }
 
         int x, y = 0;
@@ -62,13 +61,13 @@ namespace FlightSimulator
         int shooter_three_count = 10;
         int shooter_four_count = 25;
         int shooter_five_count = 35;
-        
+
 
         private void button3_Click(object sender, EventArgs e)
         {
             double NumberofObstacles = Convert.ToDouble(numudObstacles.Value);
             List<int> Co_ordinates = new List<int>();
-         
+
 
             int XCo_ordinate = 0;
             int YCo_ordinate = 0;
@@ -89,9 +88,9 @@ namespace FlightSimulator
                 XCo_OrdinateCheck = Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate X:", "Valid co-ordinate: 218 - 676");
                 YCo_OrdinateCheck = Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate Y:", "Valid co-ordinate: 186 - 552");
 
-                    ValidX = Int32.TryParse(XCo_OrdinateCheck, out ValidNumber);
-                    ValidY = Int32.TryParse(YCo_OrdinateCheck, out ValidNumber);
-                
+                ValidX = Int32.TryParse(XCo_OrdinateCheck, out ValidNumber);
+                ValidY = Int32.TryParse(YCo_OrdinateCheck, out ValidNumber);
+
                 while (ValidX == false || ValidY == false)
                 {
                     MessageBox.Show("These entries aren't valid. May we have real numbers?");
@@ -106,7 +105,7 @@ namespace FlightSimulator
                 XCo_ordinate = Convert.ToInt32(XCo_OrdinateCheck);
                 YCo_ordinate = Convert.ToInt32(YCo_OrdinateCheck);
 
-              
+
 
                 while ((XCo_ordinate < 218 || XCo_ordinate > 676) && (YCo_ordinate < 186 || YCo_ordinate > 552))
                 {
@@ -114,37 +113,39 @@ namespace FlightSimulator
                     XCo_ordinate = Convert.ToInt32(Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate X:", "Valid co-ordinate: 218 - 676"));
                     YCo_ordinate = Convert.ToInt32(Interaction.InputBox("Obstacle: " + (i + 1), "Co-ordinate Y:", "Valid co-ordinate: 186 - 552"));
 
-                  
+
                 }
 
-               Co_ordinates.Add(XCo_ordinate);
-               Co_ordinates.Add(YCo_ordinate);
+                Co_ordinates.Add(XCo_ordinate);
+                Co_ordinates.Add(YCo_ordinate);
 
                 XCo_OrdinateShoot = XCo_ordinate + 3;
                 YCo_OrdinateShoot = YCo_ordinate - 10;
 
                 Co_OrdinatesShoot.Add(XCo_OrdinateShoot);
-               Co_OrdinatesShoot.Add(YCo_OrdinateShoot);
-                
-               XCo_ordinate = 0;
-               YCo_ordinate = 0;
+                Co_OrdinatesShoot.Add(YCo_OrdinateShoot);
+
+                XCo_ordinate = 0;
+                YCo_ordinate = 0;
 
                 XCo_OrdinateShoot = 0;
                 YCo_OrdinateShoot = 0;
             }
 
-            Thread shooter_1 = new Thread(delegate () {
+            Thread shooter_1 = new Thread(delegate ()
+            {
 
                 int Temp = Co_OrdinatesShoot[1];
 
                 ShootYOne = Co_OrdinatesShoot[1];
-               
+
                 for (int i = 0; i < shooter_one_count; i++)
                 {
                     ShootYOne = ShootYOne - 3;
                     ShootOne();
                     Thread.Sleep(100);
-                    
+                
+               
 
                     if (i == shooter_one_count - 1)
                     {
@@ -153,9 +154,12 @@ namespace FlightSimulator
                     }
                 }
 
+               
+
             });
 
-            Thread shooter_2 = new Thread(delegate () {
+            Thread shooter_2 = new Thread(delegate ()
+            {
 
                 int Temp2 = Co_OrdinatesShoot[3];
 
@@ -166,15 +170,22 @@ namespace FlightSimulator
                     ShootTwo();
                     Thread.Sleep(200);
 
-                    if (i == shooter_two_count - 1 )
+                    if (i == shooter_two_count - 1)
                     {
                         ShootYTwo = Temp2;
                         i = 0;
                     }
                 }
+
+                if (picShoot1.Location.X == picPlaneMap.Location.X)
+                {
+                    pBarLifePlane.Value = pBarLifePlane.Value - 10;
+                }
+
             });
 
-            Thread shooter_3 = new Thread(delegate () {
+            Thread shooter_3 = new Thread(delegate ()
+            {
 
                 int Temp3 = Co_OrdinatesShoot[5];
 
@@ -194,18 +205,19 @@ namespace FlightSimulator
                 }
             });
 
-            Thread shooter_4 = new Thread(delegate () {
+            Thread shooter_4 = new Thread(delegate ()
+            {
 
                 int Temp4 = Co_OrdinatesShoot[7];
                 ShootYFour = Co_OrdinatesShoot[7];
-               
+
                 for (int i = 0; i < shooter_four_count; i++)
                 {
                     ShootYFour = ShootYFour - 3;
                     ShootFour();
                     Thread.Sleep(10);
 
-                    if (i == shooter_four_count-1)
+                    if (i == shooter_four_count - 1)
                     {
                         ShootYFour = Temp4;
                         i = 0;
@@ -213,16 +225,17 @@ namespace FlightSimulator
                 }
             });
 
-            Thread shooter_5 = new Thread(delegate () {
+            Thread shooter_5 = new Thread(delegate ()
+            {
                 int Temp5 = Co_OrdinatesShoot[9];
                 ShootYFive = Co_OrdinatesShoot[9];
-                for ( int i = 0; i < shooter_five_count; i++)
+                for (int i = 0; i < shooter_five_count; i++)
                 {
                     ShootYFive = ShootYFive - 3;
                     ShootFive();
                     Thread.Sleep(1000);
 
-                    if (i == shooter_five_count-1)
+                    if (i == shooter_five_count - 1)
                     {
                         ShootYFive = Temp5;
                         i = 0;
@@ -244,8 +257,8 @@ namespace FlightSimulator
                     picShoot1.Location = new Point(Co_OrdinatesShoot[0], Co_OrdinatesShoot[1]);
                     picShoot1.Visible = true;
                     shooter_1.Start();
-                
-                   
+
+
                     break;
 
                 case 2:
@@ -358,39 +371,166 @@ namespace FlightSimulator
                 default:
                     break;
 
-                   
+
             }
 
             btnSetUpObstacles.Enabled = false;
 
         }
 
-       
-     
+
+
 
         private void btnProceedPlanView_Click(object sender, EventArgs e)
         {
-            
-            
-           
-           
-           
+            tabPlane.SelectedTab = tabInventoryCheck;
+
+
+
+
         }
 
         private void timeShoot1_Tick(object sender, EventArgs e)
         {
-           
-            
-           
+
+
+
         }
 
-       
 
+        int MovePlaneInitial;
+        int MovePlaneEnd;
+        bool Done = false;
+
+        int FuelDown = 0;
+
+        Thread planeMove = null;
+
+        int IncreasingSeconds, IncreasingTimeMinutes= 0;
+
+        public void Seconds()
+        {
+            if (this.lblTimeBegun.InvokeRequired)
+            {
+                MovePlane moving = new MovePlane(Seconds);
+                this.Invoke(moving);
+            }
+            else
+            {
+                this.lblTimeBegun.Text = IncreasingTimeMinutes.ToString() + ":" + IncreasingSeconds.ToString();
+            }
+        }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            timePlaneMove.Interval = 100;
-            timePlaneMove.Start();
+            Thread increasingTime = new Thread(delegate()
+            {
+                while (picPlaneMap.Location.X < 780)
+                {
+                    IncreasingSeconds = IncreasingSeconds + 1;
+
+                    if (IncreasingSeconds == 60)
+                    {
+                        IncreasingSeconds = 0;
+                        IncreasingTimeMinutes = IncreasingTimeMinutes + 1;
+                    }
+
+                    Seconds();
+                    Thread.Sleep(100);
+                }
+                
+            });
+
+            increasingTime.Start();
+
+            FuelDown = Convert.ToInt32(txtFuelLeft.Text);
+            int InventoryWeight = InventoryCheck.Count();
+            Thread FuelLeft = new Thread(delegate ()
+            {
+                while (FuelDown != 0)
+                {
+                    FuelDown = FuelDown - 1;
+                    FuelDying();
+                    Thread.Sleep((10 * speedChange) - InventoryWeight);
+                }
+
+                if (FuelDown == 0)
+                {
+                    MessageBox.Show("You have failed! Fuel tank depleted!");
+                    lstDescription.Items.Add("Success Rating: " + (100 - pBarEnemy.Value) + "%");
+                    
+                }
+
+            });
+
+            FuelLeft.Start();
+            txtFuelLeft.Enabled = false;
+
+            
+
+            speedChange = Convert.ToInt32(numudSpeed.Value);
+            speedPlane = picPlaneMap.Location.X;
+
+            Thread speedGoing = new Thread(delegate ()
+            {
+                while (speedPlane != 0)
+                {
+                    speedPlane = speedPlane - 3;
+
+                    PlaneSpeed();
+                    Thread.Sleep(100 * speedChange);
+                    speedChange = Convert.ToInt32(numudSpeed.Value);
+
+
+                }
+
+                while (speedPlane != 769)
+                {
+                    speedPlane = speedPlane + 3;
+
+
+                    PlaneSpeed();
+                    Thread.Sleep(100 * speedChange);
+                    speedChange = Convert.ToInt32(numudSpeed.Value);
+
+
+                }
+            });
+
+            speedGoing.Start();
+            btnSimulate.Enabled = false;
+
+
+
+        }
+
+        public void FuelDying()
+        {
+            if (this.txtFuelLeft.InvokeRequired)
+            {
+                MovePlane moving = new MovePlane(FuelDying);
+                this.Invoke(moving);
+            }
+            else
+            {
+                this.txtFuelLeft.Text = FuelDown.ToString();
+            }
+
+        }
+
+        public delegate void MovePlane();
+
+        public void movingPlane()
+        {
+            if (this.picPlaneMap.InvokeRequired)
+            {
+                MovePlane moving = new MovePlane(movingPlane);
+                this.Invoke(moving);
+            }
+            else
+            {
+                this.picPlaneMap.Location = new Point(MovePlaneInitial, picPlaneMap.Location.Y);
+            }
         }
 
         protected override void OnMouseMove(MouseEventArgs e)
@@ -417,7 +557,12 @@ namespace FlightSimulator
             else
             {
                 this.picShoot1.Location = new Point(Co_OrdinatesShoot[0], ShootYOne);
+                if (picShoot1.Location.Y == picPlaneMap.Location.Y && picShoot1.Location.X == picPlaneMap.Location.X)
+                {
+                    pBarLifePlane.Value = pBarLifePlane.Value - 10;
+                }
             }
+
         }
 
 
@@ -432,7 +577,10 @@ namespace FlightSimulator
             {
 
                 this.picShoot2.Location = new Point(Co_OrdinatesShoot[2], ShootYTwo);
-
+                if (picShoot2.Location.X == picPlaneMap.Location.X)
+                {
+                    pBarLifePlane.Value = pBarLifePlane.Value - 10;
+                }
             }
         }
 
@@ -448,12 +596,15 @@ namespace FlightSimulator
             {
 
                 this.picShoot3.Location = new Point(Co_OrdinatesShoot[4], ShootYThree);
-
+                if (picShoot3.Location.X == picPlaneMap.Location.X)
+                {
+                    pBarLifePlane.Value = pBarLifePlane.Value - 10;
+                }
             }
         }
 
-        int speed = 0;
-        int alitude = 0;
+        int speedPlane, speedChange = 0;
+        Thread speedGoing = null;
 
         private void btnAlter_Click(object sender, EventArgs e)
         {
@@ -461,10 +612,243 @@ namespace FlightSimulator
 
         }
 
+        public void PlaneSpeed()
+        {
+            if (this.picPlaneMap.InvokeRequired)
+            {
+                MovePlane moving = new MovePlane(PlaneSpeed);
+                this.Invoke(moving);
+            }
+            else
+            {
+                this.picPlaneMap.Location = new Point(speedPlane, picPlaneMap.Location.Y);
+
+                if (speedPlane < 278)
+                {
+                    lblArmory.Visible = true;
+                    picArmory.Visible = true;
+
+                    lblBaracks.Visible = true;
+                    picBarracks.Visible = true;
+
+                    lblQuarters.Visible = true;
+                    picOffice.Visible = true;
+
+                    lblMessHall.Visible = true;
+                    picMessHall.Visible = true;
+
+                    lblHospital.Visible = true;
+                    picHostpital.Visible = true;
+                }
+            }
+
+        }
+
         private void tabPlane_SelectedIndexChanged(object sender, EventArgs e)
         {
 
 
+        }
+
+
+        int alitudePlaneUp, altitudePlaneDown = 0;
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            alitudePlaneUp = picPlaneMap.Location.Y;
+
+            int alterAltitude = Convert.ToInt32(numudAltitude.Value);
+
+            Thread Altitude = new Thread(delegate ()
+            {
+
+                alitudePlaneUp = alitudePlaneUp - (alterAltitude * 3);
+                PlaneAltitudeUp();
+
+                Thread.Sleep(1000);
+            });
+
+            Altitude.Start();
+        }
+
+        public void PlaneAltitudeUp()
+        {
+            if (this.picPlaneMap.InvokeRequired)
+            {
+                MovePlane moving = new MovePlane(PlaneAltitudeUp);
+                this.Invoke(moving);
+            }
+            else
+            {
+                this.picPlaneMap.Location = new Point(picPlaneMap.Location.X, alitudePlaneUp);
+            }
+        }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            altitudePlaneDown = picPlaneMap.Location.Y;
+
+            int alterAltitude = Convert.ToInt32(numudAltitude.Value);
+
+            Thread Altitude = new Thread(delegate ()
+            {
+
+                altitudePlaneDown = altitudePlaneDown + (alterAltitude * 3);
+                PlaneAltitudeDown();
+
+                Thread.Sleep(1000);
+            });
+
+            Altitude.Start();
+        }
+
+        List<string> InventoryCheck = new List<string>();
+        int ExtraWeight = 0;
+        int CountInventory = 0;
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            int NumberOfBombs = Convert.ToInt32(numOfBombs.Value);
+
+            for (int i = 0; i < NumberOfBombs; i++)
+            {
+                InventoryCheck.Add("Bomb: " + i);
+            }
+
+            ExtraWeight = 5000 * NumberOfBombs;
+            lblExtraWeight.Text = "TOTAL EXTRA WEIGHT: " + ExtraWeight.ToString() + "KG";
+
+            lblInventoryLeft.Text = "INVENTORY LEFT: " + NumberOfBombs;
+        }
+
+        private void picMessHall_Click(object sender, EventArgs e)
+        {
+            if (InventoryCheck.Count() != 0)
+            {
+                InventoryCheck.RemoveAt(InventoryCheck.Count() - 1);
+                pBarEnemy.Value = pBarEnemy.Value - 5;
+                picMessHall.Enabled = false;
+                lblInventoryLeft.Text = "INVENTORY LEFT: " + (InventoryCheck.Count());
+
+            }
+            else
+            {
+                MessageBox.Show("NO MORE AMO!");
+            }
+
+        }
+
+        private void picArmory_Click(object sender, EventArgs e)
+        {
+            if (InventoryCheck.Count() != 0)
+            {
+                InventoryCheck.RemoveAt(InventoryCheck.Count() - 1);
+                pBarEnemy.Value = pBarEnemy.Value - 30;
+                picArmory.Enabled = false;
+                lblInventoryLeft.Text = "INVENTORY LEFT: " + (InventoryCheck.Count());
+
+            }
+            else
+            {
+                MessageBox.Show("NO MORE AMO!");
+            }
+
+        }
+
+        private void picPostOffice_Click(object sender, EventArgs e)
+        {
+            if (InventoryCheck.Count() != 0)
+            {
+                InventoryCheck.RemoveAt(InventoryCheck.Count() - 1);
+                pBarEnemy.Value = pBarEnemy.Value - 10;
+                picPostOffice.Enabled = false;
+                lblInventoryLeft.Text = "INVENTORY LEFT: " + (InventoryCheck.Count());
+            }
+            else
+            {
+                MessageBox.Show("NO MORE AMO!");
+            }
+
+        }
+
+        private void picHostpital_Click(object sender, EventArgs e)
+        {
+            if (InventoryCheck.Count() != 0)
+            {
+                InventoryCheck.RemoveAt(InventoryCheck.Count() -1 );
+                pBarEnemy.Value = pBarEnemy.Value - 15;
+                picHostpital.Enabled = false;
+                lblInventoryLeft.Text = "INVENTORY LEFT: " + (InventoryCheck.Count());
+            }
+            else
+            {
+                MessageBox.Show("NO MORE AMO!");
+            }
+
+        }
+
+        private void picBarracks_Click(object sender, EventArgs e)
+        {
+            if (InventoryCheck.Count() != 0)
+            {
+                InventoryCheck.RemoveAt(InventoryCheck.Count() - 1);
+                    pBarEnemy.Value = pBarEnemy.Value - 20;
+                picBarracks.Enabled = false;
+                lblInventoryLeft.Text = "INVENTORY LEFT: " + (InventoryCheck.Count());
+                
+            }
+            else
+            {
+                MessageBox.Show("NO MORE AMO!");
+            }
+           
+            
+        }
+
+        private void picOffice_Click(object sender, EventArgs e)
+        {
+            if (InventoryCheck.Count() != 0)
+            {
+                InventoryCheck.RemoveAt(InventoryCheck.Count() - 1);
+                pBarEnemy.Value = pBarEnemy.Value - 20;
+                picOffice.Visible = false;
+                lblInventoryLeft.Text = "INVENTORY LEFT: " + (InventoryCheck.Count());
+
+            }
+            else
+            {
+                MessageBox.Show("NO MORE AMO!");
+            }
+
+        }
+
+        private void btnProceedInventory_Click(object sender, EventArgs e)
+        {
+            tabPlane.SelectedTab = tabPlaneSpecs;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tabPlane.SelectedTab = tabSimulate;
+        }
+
+        private void timePlaneMoving_Tick(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void PlaneAltitudeDown()
+        {
+            if (this.picPlaneMap.InvokeRequired)
+            {
+                MovePlane moving = new MovePlane(PlaneAltitudeDown);
+                this.Invoke(moving);
+            }
+            else
+            {
+                this.picPlaneMap.Location = new Point(picPlaneMap.Location.X, altitudePlaneDown);
+               
+            }
         }
 
         public void ShootFour()
@@ -478,7 +862,10 @@ namespace FlightSimulator
             {
 
                 this.picShoot4.Location = new Point(Co_OrdinatesShoot[6], ShootYFour);
-
+                if (picShoot4.Location.X == picPlaneMap.Location.X)
+                {
+                    pBarLifePlane.Value = pBarLifePlane.Value - 10;
+                }
             }
         }
 
@@ -494,8 +881,12 @@ namespace FlightSimulator
             {
 
                 this.picShoot5.Location = new Point(Co_OrdinatesShoot[8], ShootYFive);
-
+                if (picShoot5.Location.Y == picPlaneMap.Location.Y)
+                {
+                    pBarLifePlane.Value = pBarLifePlane.Value - 10;
+                }
             }
         }
+
     }
 }
