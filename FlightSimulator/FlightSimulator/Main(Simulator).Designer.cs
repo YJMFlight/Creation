@@ -36,6 +36,7 @@
             this.Location1 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabSimulate = new System.Windows.Forms.TabPage();
+            this.btnGoBack = new System.Windows.Forms.Button();
             this.lblInventoryLeft = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pBarEnemy = new System.Windows.Forms.ProgressBar();
@@ -52,6 +53,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.btnSimulate = new System.Windows.Forms.Button();
             this.tabPlaneSpecs = new System.Windows.Forms.TabPage();
+            this.btnBack = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -66,6 +68,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabInventoryCheck = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnProceedInventory = new System.Windows.Forms.Button();
             this.numOfBombs = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
@@ -104,9 +107,6 @@
             this.timeShoot1 = new System.Windows.Forms.Timer(this.components);
             this.lblGameOver = new System.Windows.Forms.Label();
             this.lblTimeBegun = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnGoBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picPlaneMap)).BeginInit();
             this.tabSimulate.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -142,7 +142,7 @@
             // 
             this.picPlaneMap.BackColor = System.Drawing.Color.MediumBlue;
             this.picPlaneMap.Location = new System.Drawing.Point(768, 238);
-            this.picPlaneMap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picPlaneMap.Margin = new System.Windows.Forms.Padding(2);
             this.picPlaneMap.Name = "picPlaneMap";
             this.picPlaneMap.Size = new System.Drawing.Size(14, 15);
             this.picPlaneMap.TabIndex = 7;
@@ -209,6 +209,17 @@
             this.tabSimulate.TabIndex = 3;
             this.tabSimulate.Text = "Simulate";
             // 
+            // btnGoBack
+            // 
+            this.btnGoBack.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoBack.Location = new System.Drawing.Point(17, 90);
+            this.btnGoBack.Name = "btnGoBack";
+            this.btnGoBack.Size = new System.Drawing.Size(155, 46);
+            this.btnGoBack.TabIndex = 32;
+            this.btnGoBack.Text = "<<";
+            this.btnGoBack.UseVisualStyleBackColor = true;
+            this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
+            // 
             // lblInventoryLeft
             // 
             this.lblInventoryLeft.AutoSize = true;
@@ -234,7 +245,7 @@
             // 
             this.pBarEnemy.ForeColor = System.Drawing.Color.Red;
             this.pBarEnemy.Location = new System.Drawing.Point(98, 508);
-            this.pBarEnemy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pBarEnemy.Margin = new System.Windows.Forms.Padding(2);
             this.pBarEnemy.Name = "pBarEnemy";
             this.pBarEnemy.Size = new System.Drawing.Size(227, 28);
             this.pBarEnemy.TabIndex = 17;
@@ -254,7 +265,7 @@
             // pBarLifePlane
             // 
             this.pBarLifePlane.Location = new System.Drawing.Point(85, 2);
-            this.pBarLifePlane.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pBarLifePlane.Margin = new System.Windows.Forms.Padding(2);
             this.pBarLifePlane.Name = "pBarLifePlane";
             this.pBarLifePlane.Size = new System.Drawing.Size(227, 28);
             this.pBarLifePlane.TabIndex = 15;
@@ -307,7 +318,7 @@
             // numudAltitude
             // 
             this.numudAltitude.Location = new System.Drawing.Point(158, 115);
-            this.numudAltitude.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numudAltitude.Margin = new System.Windows.Forms.Padding(2);
             this.numudAltitude.Maximum = new decimal(new int[] {
             10,
             0,
@@ -330,7 +341,7 @@
             // numudSpeed
             // 
             this.numudSpeed.Location = new System.Drawing.Point(158, 27);
-            this.numudSpeed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numudSpeed.Margin = new System.Windows.Forms.Padding(2);
             this.numudSpeed.Maximum = new decimal(new int[] {
             10,
             0,
@@ -365,7 +376,7 @@
             this.txtFuelLeft.Name = "txtFuelLeft";
             this.txtFuelLeft.Size = new System.Drawing.Size(158, 26);
             this.txtFuelLeft.TabIndex = 4;
-            this.txtFuelLeft.Text = "2000";
+            this.txtFuelLeft.Text = "10000";
             // 
             // label23
             // 
@@ -407,11 +418,23 @@
             this.tabPlaneSpecs.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.tabPlaneSpecs.Location = new System.Drawing.Point(4, 22);
             this.tabPlaneSpecs.Name = "tabPlaneSpecs";
-            this.tabPlaneSpecs.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPlaneSpecs.Padding = new System.Windows.Forms.Padding(3);
             this.tabPlaneSpecs.Size = new System.Drawing.Size(415, 800);
             this.tabPlaneSpecs.TabIndex = 1;
             this.tabPlaneSpecs.Text = "Plane specification";
             this.tabPlaneSpecs.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(2, 282);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(188, 44);
+            this.btnBack.TabIndex = 14;
+            this.btnBack.Text = "<<";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // pictureBox8
             // 
@@ -427,7 +450,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(193, 281);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(188, 44);
             this.button2.TabIndex = 12;
@@ -462,7 +485,7 @@
             "200000",
             "300000"});
             this.cmbWeight.Location = new System.Drawing.Point(261, 152);
-            this.cmbWeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbWeight.Margin = new System.Windows.Forms.Padding(2);
             this.cmbWeight.Name = "cmbWeight";
             this.cmbWeight.Size = new System.Drawing.Size(126, 21);
             this.cmbWeight.TabIndex = 13;
@@ -569,16 +592,28 @@
             this.tabInventoryCheck.Controls.Add(this.label1);
             this.tabInventoryCheck.Location = new System.Drawing.Point(4, 22);
             this.tabInventoryCheck.Name = "tabInventoryCheck";
-            this.tabInventoryCheck.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabInventoryCheck.Padding = new System.Windows.Forms.Padding(3);
             this.tabInventoryCheck.Size = new System.Drawing.Size(415, 800);
             this.tabInventoryCheck.TabIndex = 0;
             this.tabInventoryCheck.Text = "Inventory Check";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(62, 357);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(286, 33);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "<<";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnProceedInventory
             // 
             this.btnProceedInventory.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProceedInventory.Location = new System.Drawing.Point(62, 293);
-            this.btnProceedInventory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProceedInventory.Margin = new System.Windows.Forms.Padding(2);
             this.btnProceedInventory.Name = "btnProceedInventory";
             this.btnProceedInventory.Size = new System.Drawing.Size(286, 33);
             this.btnProceedInventory.TabIndex = 36;
@@ -589,7 +624,7 @@
             // numOfBombs
             // 
             this.numOfBombs.Location = new System.Drawing.Point(62, 63);
-            this.numOfBombs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numOfBombs.Margin = new System.Windows.Forms.Padding(2);
             this.numOfBombs.Maximum = new decimal(new int[] {
             4,
             0,
@@ -635,7 +670,7 @@
             // 
             this.btnInventory.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventory.Location = new System.Drawing.Point(101, 102);
-            this.btnInventory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInventory.Margin = new System.Windows.Forms.Padding(2);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(214, 55);
             this.btnInventory.TabIndex = 31;
@@ -671,7 +706,7 @@
             // 
             this.btnProceedPlanView.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProceedPlanView.Location = new System.Drawing.Point(74, 283);
-            this.btnProceedPlanView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProceedPlanView.Margin = new System.Windows.Forms.Padding(2);
             this.btnProceedPlanView.Name = "btnProceedPlanView";
             this.btnProceedPlanView.Size = new System.Drawing.Size(286, 33);
             this.btnProceedPlanView.TabIndex = 31;
@@ -683,7 +718,7 @@
             // 
             this.btnSetUpObstacles.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetUpObstacles.Location = new System.Drawing.Point(74, 86);
-            this.btnSetUpObstacles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSetUpObstacles.Margin = new System.Windows.Forms.Padding(2);
             this.btnSetUpObstacles.Name = "btnSetUpObstacles";
             this.btnSetUpObstacles.Size = new System.Drawing.Size(286, 33);
             this.btnSetUpObstacles.TabIndex = 30;
@@ -694,7 +729,7 @@
             // numudObstacles
             // 
             this.numudObstacles.Location = new System.Drawing.Point(106, 63);
-            this.numudObstacles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numudObstacles.Margin = new System.Windows.Forms.Padding(2);
             this.numudObstacles.Maximum = new decimal(new int[] {
             5,
             0,
@@ -743,7 +778,7 @@
             // 
             this.picArmory.BackColor = System.Drawing.Color.Black;
             this.picArmory.Location = new System.Drawing.Point(11, 303);
-            this.picArmory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picArmory.Margin = new System.Windows.Forms.Padding(2);
             this.picArmory.Name = "picArmory";
             this.picArmory.Size = new System.Drawing.Size(40, 33);
             this.picArmory.TabIndex = 11;
@@ -755,7 +790,7 @@
             // 
             this.picPostOffice.BackColor = System.Drawing.Color.Black;
             this.picPostOffice.Location = new System.Drawing.Point(11, 177);
-            this.picPostOffice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picPostOffice.Margin = new System.Windows.Forms.Padding(2);
             this.picPostOffice.Name = "picPostOffice";
             this.picPostOffice.Size = new System.Drawing.Size(22, 28);
             this.picPostOffice.TabIndex = 14;
@@ -767,7 +802,7 @@
             // 
             this.picBarracks.BackColor = System.Drawing.Color.Black;
             this.picBarracks.Location = new System.Drawing.Point(24, 99);
-            this.picBarracks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBarracks.Margin = new System.Windows.Forms.Padding(2);
             this.picBarracks.Name = "picBarracks";
             this.picBarracks.Size = new System.Drawing.Size(27, 21);
             this.picBarracks.TabIndex = 15;
@@ -779,7 +814,7 @@
             // 
             this.picOffice.BackColor = System.Drawing.Color.Black;
             this.picOffice.Location = new System.Drawing.Point(11, 397);
-            this.picOffice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picOffice.Margin = new System.Windows.Forms.Padding(2);
             this.picOffice.Name = "picOffice";
             this.picOffice.Size = new System.Drawing.Size(79, 15);
             this.picOffice.TabIndex = 16;
@@ -791,7 +826,7 @@
             // 
             this.picHostpital.BackColor = System.Drawing.Color.Black;
             this.picHostpital.Location = new System.Drawing.Point(91, 153);
-            this.picHostpital.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picHostpital.Margin = new System.Windows.Forms.Padding(2);
             this.picHostpital.Name = "picHostpital";
             this.picHostpital.Size = new System.Drawing.Size(19, 37);
             this.picHostpital.TabIndex = 17;
@@ -803,7 +838,7 @@
             // 
             this.picMessHall.BackColor = System.Drawing.Color.Black;
             this.picMessHall.Location = new System.Drawing.Point(77, 256);
-            this.picMessHall.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picMessHall.Margin = new System.Windows.Forms.Padding(2);
             this.picMessHall.Name = "picMessHall";
             this.picMessHall.Size = new System.Drawing.Size(13, 12);
             this.picMessHall.TabIndex = 18;
@@ -887,7 +922,7 @@
             // 
             this.picObstacle1.BackColor = System.Drawing.Color.Red;
             this.picObstacle1.Location = new System.Drawing.Point(180, 345);
-            this.picObstacle1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picObstacle1.Margin = new System.Windows.Forms.Padding(2);
             this.picObstacle1.Name = "picObstacle1";
             this.picObstacle1.Size = new System.Drawing.Size(15, 15);
             this.picObstacle1.TabIndex = 37;
@@ -898,7 +933,7 @@
             // 
             this.picObstacle4.BackColor = System.Drawing.Color.Red;
             this.picObstacle4.Location = new System.Drawing.Point(452, 303);
-            this.picObstacle4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picObstacle4.Margin = new System.Windows.Forms.Padding(2);
             this.picObstacle4.Name = "picObstacle4";
             this.picObstacle4.Size = new System.Drawing.Size(15, 15);
             this.picObstacle4.TabIndex = 38;
@@ -909,7 +944,7 @@
             // 
             this.picObstacle3.BackColor = System.Drawing.Color.Red;
             this.picObstacle3.Location = new System.Drawing.Point(362, 247);
-            this.picObstacle3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picObstacle3.Margin = new System.Windows.Forms.Padding(2);
             this.picObstacle3.Name = "picObstacle3";
             this.picObstacle3.Size = new System.Drawing.Size(15, 15);
             this.picObstacle3.TabIndex = 39;
@@ -920,7 +955,7 @@
             // 
             this.picObstacle2.BackColor = System.Drawing.Color.Red;
             this.picObstacle2.Location = new System.Drawing.Point(362, 359);
-            this.picObstacle2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picObstacle2.Margin = new System.Windows.Forms.Padding(2);
             this.picObstacle2.Name = "picObstacle2";
             this.picObstacle2.Size = new System.Drawing.Size(15, 15);
             this.picObstacle2.TabIndex = 40;
@@ -931,7 +966,7 @@
             // 
             this.picObstacle5.BackColor = System.Drawing.Color.Red;
             this.picObstacle5.Location = new System.Drawing.Point(529, 224);
-            this.picObstacle5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picObstacle5.Margin = new System.Windows.Forms.Padding(2);
             this.picObstacle5.Name = "picObstacle5";
             this.picObstacle5.Size = new System.Drawing.Size(15, 15);
             this.picObstacle5.TabIndex = 41;
@@ -942,7 +977,7 @@
             // 
             this.picShoot1.BackColor = System.Drawing.Color.Gold;
             this.picShoot1.Location = new System.Drawing.Point(182, 337);
-            this.picShoot1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picShoot1.Margin = new System.Windows.Forms.Padding(2);
             this.picShoot1.Name = "picShoot1";
             this.picShoot1.Size = new System.Drawing.Size(8, 11);
             this.picShoot1.TabIndex = 42;
@@ -953,7 +988,7 @@
             // 
             this.picShoot4.BackColor = System.Drawing.Color.Gold;
             this.picShoot4.Location = new System.Drawing.Point(527, 288);
-            this.picShoot4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picShoot4.Margin = new System.Windows.Forms.Padding(2);
             this.picShoot4.Name = "picShoot4";
             this.picShoot4.Size = new System.Drawing.Size(8, 11);
             this.picShoot4.TabIndex = 43;
@@ -964,7 +999,7 @@
             // 
             this.picShoot3.BackColor = System.Drawing.Color.Gold;
             this.picShoot3.Location = new System.Drawing.Point(533, 295);
-            this.picShoot3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picShoot3.Margin = new System.Windows.Forms.Padding(2);
             this.picShoot3.Name = "picShoot3";
             this.picShoot3.Size = new System.Drawing.Size(8, 11);
             this.picShoot3.TabIndex = 44;
@@ -975,7 +1010,7 @@
             // 
             this.picShoot2.BackColor = System.Drawing.Color.Gold;
             this.picShoot2.Location = new System.Drawing.Point(362, 349);
-            this.picShoot2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picShoot2.Margin = new System.Windows.Forms.Padding(2);
             this.picShoot2.Name = "picShoot2";
             this.picShoot2.Size = new System.Drawing.Size(8, 11);
             this.picShoot2.TabIndex = 45;
@@ -986,7 +1021,7 @@
             // 
             this.picShoot5.BackColor = System.Drawing.Color.Gold;
             this.picShoot5.Location = new System.Drawing.Point(533, 209);
-            this.picShoot5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picShoot5.Margin = new System.Windows.Forms.Padding(2);
             this.picShoot5.Name = "picShoot5";
             this.picShoot5.Size = new System.Drawing.Size(8, 11);
             this.picShoot5.TabIndex = 46;
@@ -1019,41 +1054,6 @@
             this.lblTimeBegun.Name = "lblTimeBegun";
             this.lblTimeBegun.Size = new System.Drawing.Size(0, 17);
             this.lblTimeBegun.TabIndex = 49;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(62, 357);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(286, 33);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "<<";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(2, 282);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(188, 44);
-            this.btnBack.TabIndex = 14;
-            this.btnBack.Text = "<<";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // btnGoBack
-            // 
-            this.btnGoBack.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoBack.Location = new System.Drawing.Point(17, 90);
-            this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(155, 46);
-            this.btnGoBack.TabIndex = 32;
-            this.btnGoBack.Text = "<<";
-            this.btnGoBack.UseVisualStyleBackColor = true;
-            this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
             // 
             // Main_Simulator_
             // 
