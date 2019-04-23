@@ -32,35 +32,6 @@ namespace FlightSimulator
 
         private void timePlaneMove_Tick(object sender, EventArgs e)
         {
-            while(picPlaneMap.Location.X > 0)
-            {
-                picPlaneMap.Location = new Point(picPlaneMap.Location.X - 3, picPlaneMap.Location.Y);
-                int Shoot1 = picObstacle1.Location.Y;
-                switch (NumberofObstacles)
-                {
-                    case 1:
-                        if (picPlaneMap.Location.X - picShoot1.Location.X < 10)
-                        {
-                            Shoot1 = picPlaneMap.Location.Y + 10;
-
-                        }
-                        break;
-                    default:
-                        break;
-                }
-            }
-
-           
-            while (picPlaneMap.Location.X < 790)
-            {
-                picPlaneMap.Location = new Point(picPlaneMap.Location.X + 3, picPlaneMap.Location.Y);
-
-                if (picPlaneMap.Location.X > 780)
-                {
-                    timePlaneMove.Stop();
-                }
-
-            }
 
         }
 
@@ -73,6 +44,11 @@ namespace FlightSimulator
 
         private void Main_Simulator__Load(object sender, EventArgs e)
         {
+            Random yCo = new Random();
+            int co = yCo.Next(186, 552);
+
+            picPlaneMap.Location = new Point(picPlaneMap.Location.X, co);
+
 
         }
 
@@ -91,37 +67,17 @@ namespace FlightSimulator
         int shooter_four_count = 25;
         int shooter_five_count = 35;
 
+        int XCo_ordinate = 0;
+        int YCo_ordinate = 0;
         double NumberofObstacles = 0;
-
-        List<int> Co_ordinates = new List<int>();
-        int XCo_Ordinate,YCo_Ordinate;
-
 
         private void button3_Click(object sender, EventArgs e)
         {
             NumberofObstacles = Convert.ToDouble(numudObstacles.Value);
+            List<int> Co_ordinates = new List<int>();
 
-            if (numudObstacles.Value ==1)
-            {
-                for (int i = 0; i < numudObstacles.Value; i++)
-                {
-                    Co_ordinates[0] = XCo_Ordinate;
-                    Co_ordinates[1] = YCo_Ordinate;
-                    string insert = "INSERT INTO tbl_obstacle () values()";
-                }
-            }
-            else
-            {
-                for (int i = 0; i < numudObstacles.Value; i++)
-                {
-                    Co_ordinates[0 + i + i] = XCo_Ordinate;
-                    Co_ordinates[1 + i + i] = YCo_Ordinate;
-                    
-                }
-            }
 
-            int XCo_ordinate = 0;
-            int YCo_ordinate = 0;
+          
             int XCo_OrdinateShoot = 0;
             int YCo_OrdinateShoot = 0;
 
@@ -307,9 +263,8 @@ namespace FlightSimulator
 
                     picShoot1.Location = new Point(Co_OrdinatesShoot[0], Co_OrdinatesShoot[1]);
                     picShoot1.Visible = true;
+
                     shooter_1.Start();
-
-
                     break;
 
                 case 2:
@@ -471,13 +426,32 @@ namespace FlightSimulator
                 this.lblTimeBegun.Text = IncreasingTimeMinutes.ToString() + ":" + IncreasingSeconds.ToString();
             }
         }
-        
+        bool starting= false;
+        int ChangeY = 0;
+
+        public void ChangingY()
+        {
+            if (this.picPlaneMap.InvokeRequired)
+            {
+                MovePlane moving = new MovePlane(ChangingY);
+                this.Invoke(moving);
+            }
+            else
+            {
+                this.picPlaneMap.Location = new Point(picPlaneMap.Location.X, picPlaneMap.Location.Y - ChangeY);
+            }
+        }
         
         private void button3_Click_1(object sender, EventArgs e)
         {
-            
+            // XCo_ordinate 
+            // YCo_ordinate 
+
+           
+
             Thread increasingTime = new Thread(delegate()
             {
+               
                 while (picPlaneMap.Location.X < 780)
                 {
                     IncreasingSeconds = IncreasingSeconds + 1;
@@ -504,7 +478,7 @@ namespace FlightSimulator
                 {
                     FuelDown = FuelDown - 1;
                     FuelDying();
-                    Thread.Sleep((10 * speedChange) - InventoryWeight);
+                    Thread.Sleep(50 / InventoryWeight);
                 }
 
                 if (FuelDown == 0)
@@ -524,48 +498,97 @@ namespace FlightSimulator
             speedChange = Convert.ToInt32(numudSpeed.Value);
             speedPlane = picPlaneMap.Location.X;
 
-           // timePlaneMove.Interval = 1000;
-           // timePlaneMove.Start();
+            Random ran = new Random();
 
-            if (picPlaneMap.Location.X > 800)
+            Thread speedGoing = new Thread(delegate ()
             {
-                timePlaneMove.Stop();
-            }
+               
+
+                while (speedPlane != 0)
+                {
+                    ChangeY = 15;
+                    speedPlane = speedPlane - 3;
+                   
+                    
+                    PlaneSpeed();
+                    Thread.Sleep(100 * InventoryCheck.Count());
+                    speedChange = Convert.ToInt32(numudSpeed.Value);
+
+                   
+                                if ((picPlaneMap.Location.X - picObstacle1.Location.X <= 30) && (picPlaneMap.Location.X - picObstacle1.Location.X >= 0))
+                                {
+                                    if ((picPlaneMap.Location.Y - picObstacle1.Location.Y <= 30) && (picPlaneMap.Location.Y - picObstacle1.Location.Y >= 0))
+                                        {
+                            ChangingY();
+                        }
+                                   
+                                }
+                   
+
+                        if ((picPlaneMap.Location.X - picObstacle2.Location.X <= 30) && (picPlaneMap.Location.X - picObstacle2.Location.X >= 0))
+                        {
+                            if ((picPlaneMap.Location.Y - picObstacle2.Location.Y <= 30) && (picPlaneMap.Location.Y - picObstacle2.Location.Y >= 0))
+                            {
+                               
+                                ChangingY();
+                            }
 
 
-
-               Thread speedGoing = new Thread(delegate ()
-               {
-                   while (speedPlane != 0)
-                   {
-                       speedPlane = speedPlane - 3;
-                       PlaneSpeed();
-
-                      
+                        }
 
 
-                       
-                       Thread.Sleep(100);
-
-                      
-
-                   }
-
-                   while (speedPlane != 769)
-                   {
-                       speedPlane = speedPlane + 3;
+                        if ((picPlaneMap.Location.X - picObstacle3.Location.X <= 30) && (picPlaneMap.Location.X - picObstacle3.Location.X >= 0))
+                        {
+                            if ((picPlaneMap.Location.Y - picObstacle3.Location.Y <= 30) && (picPlaneMap.Location.Y - picObstacle3.Location.Y >= 0))
+                            {
+                                
+                                ChangingY();
+                            }
 
 
-                       PlaneSpeed();
-                       Thread.Sleep(100 * speedChange);
-                       speedChange = Convert.ToInt32(numudSpeed.Value);
+                        }
 
 
-                   }
-               });
+                        if ((picPlaneMap.Location.X - picObstacle4.Location.X <= 30) && (picPlaneMap.Location.X - picObstacle4.Location.X >= 0))
+                        {
+                            if ((picPlaneMap.Location.Y - picObstacle4.Location.Y <= 30) && (picPlaneMap.Location.Y - picObstacle4.Location.Y >= 0))
+                            {
+                               
+                                ChangingY();
 
-               speedGoing.Start(); 
+                            }
 
+
+                        }
+
+
+                        if ((picPlaneMap.Location.X - picObstacle5.Location.X <= 30) && (picPlaneMap.Location.X - picObstacle5.Location.X >= 0))
+                        {
+                            if ((picPlaneMap.Location.Y - picObstacle5.Location.Y <= 30) && (picPlaneMap.Location.Y - picObstacle5.Location.Y >= 0))
+                            {
+
+                                ChangingY();
+                            }
+
+
+                        } 
+
+                }
+
+                while (speedPlane != 769)
+                {
+                    speedPlane = speedPlane + 3;
+
+
+                    PlaneSpeed();
+                    Thread.Sleep(100 * speedChange);
+                    speedChange = Convert.ToInt32(numudSpeed.Value);
+
+
+                }
+            });
+
+            speedGoing.Start();
             btnSimulate.Enabled = false;
 
 
@@ -625,9 +648,13 @@ namespace FlightSimulator
             else
             {
                 this.picShoot1.Location = new Point(Co_OrdinatesShoot[0], ShootYOne);
-                if (picShoot1.Location.Y == picPlaneMap.Location.Y && picShoot1.Location.X == picPlaneMap.Location.X)
+                if ((picShoot1.Location.X - picPlaneMap.Location.X <= 3) && (picShoot1.Location.X - picPlaneMap.Location.X >= 3))
                 {
-                    pBarLifePlane.Value = pBarLifePlane.Value - 10;
+                    if ((picShoot1.Location.Y - picPlaneMap.Location.Y <= 3) && (picShoot1.Location.Y - picPlaneMap.Location.Y >= 3))
+                    {
+                        pBarLifePlane.Value = pBarLifePlane.Value - 10;
+                    }
+                        
                 }
             }
 
@@ -645,9 +672,13 @@ namespace FlightSimulator
             {
 
                 this.picShoot2.Location = new Point(Co_OrdinatesShoot[2], ShootYTwo);
-                if (picShoot2.Location.Y == picPlaneMap.Location.Y && picShoot2.Location.X == picPlaneMap.Location.X)
+                if ((picShoot2.Location.X - picPlaneMap.Location.X <= 3) && (picShoot2.Location.X - picPlaneMap.Location.X >= 3))
                 {
-                    pBarLifePlane.Value = pBarLifePlane.Value - 10;
+                    if ((picShoot2.Location.Y - picPlaneMap.Location.Y <= 3) && (picShoot2.Location.Y - picPlaneMap.Location.Y >= 3))
+                    {
+                        pBarLifePlane.Value = pBarLifePlane.Value - 10;
+                    }
+
                 }
             }
         }
@@ -664,9 +695,13 @@ namespace FlightSimulator
             {
 
                 this.picShoot3.Location = new Point(Co_OrdinatesShoot[4], ShootYThree);
-                if (picShoot3.Location.Y == picPlaneMap.Location.Y && picShoot3.Location.X == picPlaneMap.Location.X)
+                if ((picShoot3.Location.X - picPlaneMap.Location.X <= 3) && (picShoot3.Location.X - picPlaneMap.Location.X >= 3))
                 {
-                    pBarLifePlane.Value = pBarLifePlane.Value - 10;
+                    if ((picShoot3.Location.Y - picPlaneMap.Location.Y <= 3) && (picShoot3.Location.Y - picPlaneMap.Location.Y >= 3))
+                    {
+                        pBarLifePlane.Value = pBarLifePlane.Value - 10;
+                    }
+
                 }
             }
         }
@@ -689,40 +724,25 @@ namespace FlightSimulator
             }
             else
             {
-                if (picPlaneMap.Location.X - picShoot1.Location.X < 10 || picPlaneMap.Location.X - picShoot1.Location.X < 10)
+                this.picPlaneMap.Location = new Point(speedPlane, picPlaneMap.Location.Y);
+
+                if (speedPlane < 278)
                 {
-                    this.picPlaneMap.Location = new Point(speedPlane, picPlaneMap.Location.Y - 10);
-                    this.picPlaneMap.Location = new Point(speedPlane, picPlaneMap.Location.Y + 10);
+                    lblArmory.Visible = true;
+                    picArmory.Visible = true;
 
+                    lblBaracks.Visible = true;
+                    picBarracks.Visible = true;
+
+                    lblQuarters.Visible = true;
+                    picOffice.Visible = true;
+
+                    lblMessHall.Visible = true;
+                    picMessHall.Visible = true;
+
+                    lblHospital.Visible = true;
+                    picHostpital.Visible = true;
                 }
-                else
-                {
-                    this.picPlaneMap.Location = new Point(speedPlane, picPlaneMap.Location.Y);
-
-                    if (speedPlane < 278)
-                    {
-                        lblArmory.Visible = true;
-                        picArmory.Visible = true;
-
-                        lblBaracks.Visible = true;
-                        picBarracks.Visible = true;
-
-                        lblQuarters.Visible = true;
-                        picOffice.Visible = true;
-
-                        lblMessHall.Visible = true;
-                        picMessHall.Visible = true;
-
-                        lblHospital.Visible = true;
-                        picHostpital.Visible = true;
-                    }
-
-                }
-
-                int Shoot1 = picPlaneMap.Location.Y;
-
-              
-
             }
 
         }
@@ -965,9 +985,13 @@ namespace FlightSimulator
             {
 
                 this.picShoot4.Location = new Point(Co_OrdinatesShoot[6], ShootYFour);
-                if (picShoot4.Location.Y == picPlaneMap.Location.Y && picShoot4.Location.X == picPlaneMap.Location.X)
+                if ((picShoot4.Location.X - picPlaneMap.Location.X <= 3) && (picShoot4.Location.X - picPlaneMap.Location.X >= 3))
                 {
-                    pBarLifePlane.Value = pBarLifePlane.Value - 10;
+                    if ((picShoot4.Location.Y - picPlaneMap.Location.Y <= 3) && (picShoot4.Location.Y - picPlaneMap.Location.Y >= 3))
+                    {
+                        pBarLifePlane.Value = pBarLifePlane.Value - 10;
+                    }
+
                 }
             }
         }
@@ -984,9 +1008,13 @@ namespace FlightSimulator
             {
 
                 this.picShoot5.Location = new Point(Co_OrdinatesShoot[8], ShootYFive);
-                if (picShoot5.Location.Y == picPlaneMap.Location.Y && picShoot5.Location.X == picPlaneMap.Location.X)
+                if ((picShoot5.Location.X - picPlaneMap.Location.X <= 3) && (picShoot5.Location.X - picPlaneMap.Location.X >= 3))
                 {
-                    pBarLifePlane.Value = pBarLifePlane.Value - 10;
+                    if ((picShoot5.Location.Y - picPlaneMap.Location.Y <= 3) && (picShoot5.Location.Y - picPlaneMap.Location.Y >= 3))
+                    {
+                        pBarLifePlane.Value = pBarLifePlane.Value - 10;
+                    }
+
                 }
             }
         }
