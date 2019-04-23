@@ -36,6 +36,7 @@
             this.Location1 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabSimulate = new System.Windows.Forms.TabPage();
+            this.btnGoBack = new System.Windows.Forms.Button();
             this.lblInventoryLeft = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pBarEnemy = new System.Windows.Forms.ProgressBar();
@@ -52,6 +53,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.btnSimulate = new System.Windows.Forms.Button();
             this.tabPlaneSpecs = new System.Windows.Forms.TabPage();
+            this.btnBack = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -66,6 +68,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabInventoryCheck = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnProceedInventory = new System.Windows.Forms.Button();
             this.numOfBombs = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
@@ -104,9 +107,6 @@
             this.timeShoot1 = new System.Windows.Forms.Timer(this.components);
             this.lblGameOver = new System.Windows.Forms.Label();
             this.lblTimeBegun = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnGoBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picPlaneMap)).BeginInit();
             this.tabSimulate.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -141,20 +141,19 @@
             // picPlaneMap
             // 
             this.picPlaneMap.BackColor = System.Drawing.Color.MediumBlue;
-            this.picPlaneMap.Location = new System.Drawing.Point(768, 238);
-            this.picPlaneMap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picPlaneMap.Location = new System.Drawing.Point(1024, 293);
+            this.picPlaneMap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picPlaneMap.Name = "picPlaneMap";
-            this.picPlaneMap.Size = new System.Drawing.Size(14, 15);
+            this.picPlaneMap.Size = new System.Drawing.Size(19, 18);
             this.picPlaneMap.TabIndex = 7;
             this.picPlaneMap.TabStop = false;
             // 
             // lblPlaneShow
             // 
             this.lblPlaneShow.AutoSize = true;
-            this.lblPlaneShow.Location = new System.Drawing.Point(727, 255);
-            this.lblPlaneShow.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPlaneShow.Location = new System.Drawing.Point(969, 314);
             this.lblPlaneShow.Name = "lblPlaneShow";
-            this.lblPlaneShow.Size = new System.Drawing.Size(76, 13);
+            this.lblPlaneShow.Size = new System.Drawing.Size(97, 17);
             this.lblPlaneShow.TabIndex = 8;
             this.lblPlaneShow.Text = "YOUR PLANE";
             // 
@@ -166,9 +165,8 @@
             // 
             this.Location2.AutoSize = true;
             this.Location2.Location = new System.Drawing.Point(0, 0);
-            this.Location2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Location2.Name = "Location2";
-            this.Location2.Size = new System.Drawing.Size(13, 13);
+            this.Location2.Size = new System.Drawing.Size(16, 17);
             this.Location2.TabIndex = 9;
             this.Location2.Text = "0";
             // 
@@ -176,17 +174,17 @@
             // 
             this.Location1.AutoSize = true;
             this.Location1.Location = new System.Drawing.Point(0, 0);
-            this.Location1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Location1.Name = "Location1";
-            this.Location1.Size = new System.Drawing.Size(13, 13);
+            this.Location1.Size = new System.Drawing.Size(16, 17);
             this.Location1.TabIndex = 10;
             this.Location1.Text = "0";
             // 
             // tabPage5
             // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(415, 800);
+            this.tabPage5.Size = new System.Drawing.Size(556, 988);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -203,20 +201,34 @@
             this.tabSimulate.Controls.Add(this.pBarLifePlane);
             this.tabSimulate.Controls.Add(this.groupBox7);
             this.tabSimulate.Controls.Add(this.btnSimulate);
-            this.tabSimulate.Location = new System.Drawing.Point(4, 22);
+            this.tabSimulate.Location = new System.Drawing.Point(4, 25);
+            this.tabSimulate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabSimulate.Name = "tabSimulate";
-            this.tabSimulate.Size = new System.Drawing.Size(415, 800);
+            this.tabSimulate.Size = new System.Drawing.Size(556, 988);
             this.tabSimulate.TabIndex = 3;
             this.tabSimulate.Text = "Simulate";
+            // 
+            // btnGoBack
+            // 
+            this.btnGoBack.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoBack.Location = new System.Drawing.Point(23, 111);
+            this.btnGoBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGoBack.Name = "btnGoBack";
+            this.btnGoBack.Size = new System.Drawing.Size(207, 57);
+            this.btnGoBack.TabIndex = 32;
+            this.btnGoBack.Text = "<<";
+            this.btnGoBack.UseVisualStyleBackColor = true;
+            this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
             // 
             // lblInventoryLeft
             // 
             this.lblInventoryLeft.AutoSize = true;
             this.lblInventoryLeft.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInventoryLeft.ForeColor = System.Drawing.Color.White;
-            this.lblInventoryLeft.Location = new System.Drawing.Point(93, 405);
+            this.lblInventoryLeft.Location = new System.Drawing.Point(124, 498);
+            this.lblInventoryLeft.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInventoryLeft.Name = "lblInventoryLeft";
-            this.lblInventoryLeft.Size = new System.Drawing.Size(0, 26);
+            this.lblInventoryLeft.Size = new System.Drawing.Size(0, 32);
             this.lblInventoryLeft.TabIndex = 31;
             // 
             // label7
@@ -224,19 +236,20 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(139, 483);
+            this.label7.Location = new System.Drawing.Point(185, 594);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(153, 22);
+            this.label7.Size = new System.Drawing.Size(192, 28);
             this.label7.TabIndex = 18;
             this.label7.Text = "Enemy Damage";
             // 
             // pBarEnemy
             // 
             this.pBarEnemy.ForeColor = System.Drawing.Color.Red;
-            this.pBarEnemy.Location = new System.Drawing.Point(98, 508);
-            this.pBarEnemy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pBarEnemy.Location = new System.Drawing.Point(131, 625);
+            this.pBarEnemy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pBarEnemy.Name = "pBarEnemy";
-            this.pBarEnemy.Size = new System.Drawing.Size(227, 28);
+            this.pBarEnemy.Size = new System.Drawing.Size(303, 34);
             this.pBarEnemy.TabIndex = 17;
             this.pBarEnemy.Value = 100;
             // 
@@ -245,18 +258,19 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(155, 32);
+            this.label6.Location = new System.Drawing.Point(207, 39);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 22);
+            this.label6.Size = new System.Drawing.Size(126, 28);
             this.label6.TabIndex = 16;
             this.label6.Text = "Plane Life";
             // 
             // pBarLifePlane
             // 
-            this.pBarLifePlane.Location = new System.Drawing.Point(85, 2);
-            this.pBarLifePlane.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pBarLifePlane.Location = new System.Drawing.Point(113, 2);
+            this.pBarLifePlane.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pBarLifePlane.Name = "pBarLifePlane";
-            this.pBarLifePlane.Size = new System.Drawing.Size(227, 28);
+            this.pBarLifePlane.Size = new System.Drawing.Size(303, 34);
             this.pBarLifePlane.TabIndex = 15;
             this.pBarLifePlane.Value = 100;
             // 
@@ -273,9 +287,11 @@
             this.groupBox7.Controls.Add(this.label18);
             this.groupBox7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.ForeColor = System.Drawing.Color.White;
-            this.groupBox7.Location = new System.Drawing.Point(39, 167);
+            this.groupBox7.Location = new System.Drawing.Point(52, 206);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(335, 198);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Size = new System.Drawing.Size(447, 244);
             this.groupBox7.TabIndex = 13;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Jet Constraints";
@@ -284,9 +300,10 @@
             // 
             this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(248, 154);
+            this.button3.Location = new System.Drawing.Point(331, 190);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(68, 24);
+            this.button3.Size = new System.Drawing.Size(91, 30);
             this.button3.TabIndex = 16;
             this.button3.Text = "Down";
             this.button3.UseVisualStyleBackColor = true;
@@ -296,9 +313,10 @@
             // 
             this.btnAltitude.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAltitude.ForeColor = System.Drawing.Color.Black;
-            this.btnAltitude.Location = new System.Drawing.Point(158, 154);
+            this.btnAltitude.Location = new System.Drawing.Point(211, 190);
+            this.btnAltitude.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAltitude.Name = "btnAltitude";
-            this.btnAltitude.Size = new System.Drawing.Size(71, 24);
+            this.btnAltitude.Size = new System.Drawing.Size(95, 30);
             this.btnAltitude.TabIndex = 15;
             this.btnAltitude.Text = "Up";
             this.btnAltitude.UseVisualStyleBackColor = true;
@@ -306,8 +324,8 @@
             // 
             // numudAltitude
             // 
-            this.numudAltitude.Location = new System.Drawing.Point(158, 115);
-            this.numudAltitude.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numudAltitude.Location = new System.Drawing.Point(211, 142);
+            this.numudAltitude.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numudAltitude.Maximum = new decimal(new int[] {
             10,
             0,
@@ -319,7 +337,7 @@
             0,
             0});
             this.numudAltitude.Name = "numudAltitude";
-            this.numudAltitude.Size = new System.Drawing.Size(158, 26);
+            this.numudAltitude.Size = new System.Drawing.Size(211, 31);
             this.numudAltitude.TabIndex = 8;
             this.numudAltitude.Value = new decimal(new int[] {
             1,
@@ -329,8 +347,8 @@
             // 
             // numudSpeed
             // 
-            this.numudSpeed.Location = new System.Drawing.Point(158, 27);
-            this.numudSpeed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numudSpeed.Location = new System.Drawing.Point(211, 33);
+            this.numudSpeed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numudSpeed.Maximum = new decimal(new int[] {
             10,
             0,
@@ -342,7 +360,7 @@
             0,
             0});
             this.numudSpeed.Name = "numudSpeed";
-            this.numudSpeed.Size = new System.Drawing.Size(158, 26);
+            this.numudSpeed.Size = new System.Drawing.Size(211, 31);
             this.numudSpeed.TabIndex = 7;
             this.numudSpeed.Value = new decimal(new int[] {
             1,
@@ -353,44 +371,49 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 28);
+            this.label2.Location = new System.Drawing.Point(15, 34);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 18);
+            this.label2.Size = new System.Drawing.Size(73, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "Speed";
             // 
             // txtFuelLeft
             // 
-            this.txtFuelLeft.Location = new System.Drawing.Point(160, 70);
+            this.txtFuelLeft.Location = new System.Drawing.Point(213, 86);
+            this.txtFuelLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFuelLeft.Name = "txtFuelLeft";
-            this.txtFuelLeft.Size = new System.Drawing.Size(158, 26);
+            this.txtFuelLeft.Size = new System.Drawing.Size(209, 31);
             this.txtFuelLeft.TabIndex = 4;
             this.txtFuelLeft.Text = "2000";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(11, 72);
+            this.label23.Location = new System.Drawing.Point(15, 89);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(122, 18);
+            this.label23.Size = new System.Drawing.Size(150, 23);
             this.label23.TabIndex = 2;
             this.label23.Text = "Amount of fuel";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(11, 117);
+            this.label18.Location = new System.Drawing.Point(15, 144);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(70, 18);
+            this.label18.Size = new System.Drawing.Size(85, 23);
             this.label18.TabIndex = 1;
             this.label18.Text = "Altitude";
             // 
             // btnSimulate
             // 
             this.btnSimulate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSimulate.Location = new System.Drawing.Point(227, 90);
+            this.btnSimulate.Location = new System.Drawing.Point(303, 111);
+            this.btnSimulate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSimulate.Name = "btnSimulate";
-            this.btnSimulate.Size = new System.Drawing.Size(168, 46);
+            this.btnSimulate.Size = new System.Drawing.Size(224, 57);
             this.btnSimulate.TabIndex = 0;
             this.btnSimulate.Text = "SIMULATE";
             this.btnSimulate.UseVisualStyleBackColor = true;
@@ -405,31 +428,45 @@
             this.tabPlaneSpecs.Controls.Add(this.button2);
             this.tabPlaneSpecs.Controls.Add(this.groupBox2);
             this.tabPlaneSpecs.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.tabPlaneSpecs.Location = new System.Drawing.Point(4, 22);
+            this.tabPlaneSpecs.Location = new System.Drawing.Point(4, 25);
+            this.tabPlaneSpecs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPlaneSpecs.Name = "tabPlaneSpecs";
-            this.tabPlaneSpecs.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPlaneSpecs.Size = new System.Drawing.Size(415, 800);
+            this.tabPlaneSpecs.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPlaneSpecs.Size = new System.Drawing.Size(556, 988);
             this.tabPlaneSpecs.TabIndex = 1;
             this.tabPlaneSpecs.Text = "Plane specification";
             this.tabPlaneSpecs.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(3, 347);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(251, 54);
+            this.btnBack.TabIndex = 14;
+            this.btnBack.Text = "<<";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // pictureBox8
             // 
             this.pictureBox8.BackgroundImage = global::FlightSimulator.Properties.Resources.Webp_net_resizeimage__2_;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox8.Location = new System.Drawing.Point(48, 339);
+            this.pictureBox8.Location = new System.Drawing.Point(64, 417);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(407, 177);
+            this.pictureBox8.Size = new System.Drawing.Size(543, 218);
             this.pictureBox8.TabIndex = 13;
             this.pictureBox8.TabStop = false;
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(193, 281);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(257, 346);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(188, 44);
+            this.button2.Size = new System.Drawing.Size(251, 54);
             this.button2.TabIndex = 12;
             this.button2.Text = "PROCEED";
             this.button2.UseVisualStyleBackColor = true;
@@ -447,9 +484,11 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Location = new System.Drawing.Point(6, 24);
+            this.groupBox2.Location = new System.Drawing.Point(8, 30);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(426, 238);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(568, 293);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Plane specs";
@@ -461,43 +500,47 @@
             "100000",
             "200000",
             "300000"});
-            this.cmbWeight.Location = new System.Drawing.Point(261, 152);
-            this.cmbWeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbWeight.Location = new System.Drawing.Point(348, 187);
+            this.cmbWeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbWeight.Name = "cmbWeight";
-            this.cmbWeight.Size = new System.Drawing.Size(126, 21);
+            this.cmbWeight.Size = new System.Drawing.Size(167, 24);
             this.cmbWeight.TabIndex = 13;
             // 
             // txtPlaneName
             // 
-            this.txtPlaneName.Location = new System.Drawing.Point(261, 63);
+            this.txtPlaneName.Location = new System.Drawing.Point(348, 78);
+            this.txtPlaneName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPlaneName.Name = "txtPlaneName";
-            this.txtPlaneName.Size = new System.Drawing.Size(126, 20);
+            this.txtPlaneName.Size = new System.Drawing.Size(167, 22);
             this.txtPlaneName.TabIndex = 10;
             // 
             // txtPlaneTankSize
             // 
             this.txtPlaneTankSize.Enabled = false;
-            this.txtPlaneTankSize.Location = new System.Drawing.Point(261, 206);
+            this.txtPlaneTankSize.Location = new System.Drawing.Point(348, 254);
+            this.txtPlaneTankSize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPlaneTankSize.Name = "txtPlaneTankSize";
-            this.txtPlaneTankSize.Size = new System.Drawing.Size(126, 20);
+            this.txtPlaneTankSize.Size = new System.Drawing.Size(167, 22);
             this.txtPlaneTankSize.TabIndex = 8;
             this.txtPlaneTankSize.Text = "10000\r\n";
             // 
             // txtPlaneModel
             // 
             this.txtPlaneModel.Enabled = false;
-            this.txtPlaneModel.Location = new System.Drawing.Point(261, 106);
+            this.txtPlaneModel.Location = new System.Drawing.Point(348, 130);
+            this.txtPlaneModel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPlaneModel.Name = "txtPlaneModel";
-            this.txtPlaneModel.Size = new System.Drawing.Size(126, 20);
+            this.txtPlaneModel.Size = new System.Drawing.Size(167, 22);
             this.txtPlaneModel.TabIndex = 6;
             this.txtPlaneModel.Text = "AirCraftShooter";
             // 
             // txtPlaneID
             // 
             this.txtPlaneID.Enabled = false;
-            this.txtPlaneID.Location = new System.Drawing.Point(261, 24);
+            this.txtPlaneID.Location = new System.Drawing.Point(348, 30);
+            this.txtPlaneID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPlaneID.Name = "txtPlaneID";
-            this.txtPlaneID.Size = new System.Drawing.Size(126, 20);
+            this.txtPlaneID.Size = new System.Drawing.Size(167, 22);
             this.txtPlaneID.TabIndex = 5;
             this.txtPlaneID.Text = "1";
             // 
@@ -506,9 +549,10 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(13, 201);
+            this.label14.Location = new System.Drawing.Point(17, 247);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(239, 22);
+            this.label14.Size = new System.Drawing.Size(303, 28);
             this.label14.TabIndex = 4;
             this.label14.Text = "Fuel Tank Size (in litres): ";
             // 
@@ -517,9 +561,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(14, 147);
+            this.label9.Location = new System.Drawing.Point(19, 181);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(137, 22);
+            this.label9.Size = new System.Drawing.Size(171, 28);
             this.label9.TabIndex = 2;
             this.label9.Text = "Weight (in kg)";
             // 
@@ -528,9 +573,10 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(14, 58);
+            this.label10.Location = new System.Drawing.Point(19, 71);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(130, 22);
+            this.label10.Size = new System.Drawing.Size(164, 28);
             this.label10.TabIndex = 1;
             this.label10.Text = "Plane Name :";
             // 
@@ -539,9 +585,10 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(13, 102);
+            this.label11.Location = new System.Drawing.Point(17, 126);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(132, 22);
+            this.label11.Size = new System.Drawing.Size(167, 28);
             this.label11.TabIndex = 1;
             this.label11.Text = "Plane Model :";
             // 
@@ -550,9 +597,10 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(14, 19);
+            this.label12.Location = new System.Drawing.Point(19, 23);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(97, 22);
+            this.label12.Size = new System.Drawing.Size(123, 28);
             this.label12.TabIndex = 0;
             this.label12.Text = "Plane ID :";
             // 
@@ -567,20 +615,33 @@
             this.tabInventoryCheck.Controls.Add(this.lblExtraWeight);
             this.tabInventoryCheck.Controls.Add(this.btnInventory);
             this.tabInventoryCheck.Controls.Add(this.label1);
-            this.tabInventoryCheck.Location = new System.Drawing.Point(4, 22);
+            this.tabInventoryCheck.Location = new System.Drawing.Point(4, 25);
+            this.tabInventoryCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabInventoryCheck.Name = "tabInventoryCheck";
-            this.tabInventoryCheck.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabInventoryCheck.Size = new System.Drawing.Size(415, 800);
+            this.tabInventoryCheck.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabInventoryCheck.Size = new System.Drawing.Size(556, 988);
             this.tabInventoryCheck.TabIndex = 0;
             this.tabInventoryCheck.Text = "Inventory Check";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(83, 439);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(381, 41);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "<<";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnProceedInventory
             // 
             this.btnProceedInventory.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProceedInventory.Location = new System.Drawing.Point(62, 293);
-            this.btnProceedInventory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProceedInventory.Location = new System.Drawing.Point(83, 361);
+            this.btnProceedInventory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProceedInventory.Name = "btnProceedInventory";
-            this.btnProceedInventory.Size = new System.Drawing.Size(286, 33);
+            this.btnProceedInventory.Size = new System.Drawing.Size(381, 41);
             this.btnProceedInventory.TabIndex = 36;
             this.btnProceedInventory.Text = "PROCEED";
             this.btnProceedInventory.UseVisualStyleBackColor = true;
@@ -588,15 +649,15 @@
             // 
             // numOfBombs
             // 
-            this.numOfBombs.Location = new System.Drawing.Point(62, 63);
-            this.numOfBombs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numOfBombs.Location = new System.Drawing.Point(83, 78);
+            this.numOfBombs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numOfBombs.Maximum = new decimal(new int[] {
             4,
             0,
             0,
             0});
             this.numOfBombs.Name = "numOfBombs";
-            this.numOfBombs.Size = new System.Drawing.Size(296, 20);
+            this.numOfBombs.Size = new System.Drawing.Size(395, 22);
             this.numOfBombs.TabIndex = 35;
             // 
             // label5
@@ -604,9 +665,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(6, 206);
+            this.label5.Location = new System.Drawing.Point(8, 254);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(390, 26);
+            this.label5.Size = new System.Drawing.Size(493, 32);
             this.label5.TabIndex = 34;
             this.label5.Text = "INCREASES  FUEL CONSUMPTION";
             // 
@@ -615,9 +677,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(6, 177);
+            this.label4.Location = new System.Drawing.Point(8, 218);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(327, 26);
+            this.label4.Size = new System.Drawing.Size(415, 32);
             this.label4.TabIndex = 33;
             this.label4.Text = "DISCLAIMER: MORE WEIGHT";
             // 
@@ -626,18 +689,19 @@
             this.lblExtraWeight.AutoSize = true;
             this.lblExtraWeight.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExtraWeight.ForeColor = System.Drawing.Color.White;
-            this.lblExtraWeight.Location = new System.Drawing.Point(6, 325);
+            this.lblExtraWeight.Location = new System.Drawing.Point(8, 400);
+            this.lblExtraWeight.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblExtraWeight.Name = "lblExtraWeight";
-            this.lblExtraWeight.Size = new System.Drawing.Size(0, 26);
+            this.lblExtraWeight.Size = new System.Drawing.Size(0, 32);
             this.lblExtraWeight.TabIndex = 32;
             // 
             // btnInventory
             // 
             this.btnInventory.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventory.Location = new System.Drawing.Point(101, 102);
-            this.btnInventory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInventory.Location = new System.Drawing.Point(135, 126);
+            this.btnInventory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(214, 55);
+            this.btnInventory.Size = new System.Drawing.Size(285, 68);
             this.btnInventory.TabIndex = 31;
             this.btnInventory.Text = "ADD BOMBS TO INVENTORY";
             this.btnInventory.UseVisualStyleBackColor = true;
@@ -648,9 +712,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(97, 21);
+            this.label1.Location = new System.Drawing.Point(129, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 26);
+            this.label1.Size = new System.Drawing.Size(293, 32);
             this.label1.TabIndex = 30;
             this.label1.Text = "INVENTORY (MAX 4)";
             // 
@@ -661,19 +726,20 @@
             this.tabObstacles.Controls.Add(this.btnSetUpObstacles);
             this.tabObstacles.Controls.Add(this.numudObstacles);
             this.tabObstacles.Controls.Add(this.label24);
-            this.tabObstacles.Location = new System.Drawing.Point(4, 22);
+            this.tabObstacles.Location = new System.Drawing.Point(4, 25);
+            this.tabObstacles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabObstacles.Name = "tabObstacles";
-            this.tabObstacles.Size = new System.Drawing.Size(415, 800);
+            this.tabObstacles.Size = new System.Drawing.Size(556, 988);
             this.tabObstacles.TabIndex = 2;
             this.tabObstacles.Text = "Obstacles";
             // 
             // btnProceedPlanView
             // 
             this.btnProceedPlanView.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProceedPlanView.Location = new System.Drawing.Point(74, 283);
-            this.btnProceedPlanView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProceedPlanView.Location = new System.Drawing.Point(99, 348);
+            this.btnProceedPlanView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProceedPlanView.Name = "btnProceedPlanView";
-            this.btnProceedPlanView.Size = new System.Drawing.Size(286, 33);
+            this.btnProceedPlanView.Size = new System.Drawing.Size(381, 41);
             this.btnProceedPlanView.TabIndex = 31;
             this.btnProceedPlanView.Text = "PROCEED";
             this.btnProceedPlanView.UseVisualStyleBackColor = true;
@@ -682,10 +748,10 @@
             // btnSetUpObstacles
             // 
             this.btnSetUpObstacles.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetUpObstacles.Location = new System.Drawing.Point(74, 86);
-            this.btnSetUpObstacles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSetUpObstacles.Location = new System.Drawing.Point(99, 106);
+            this.btnSetUpObstacles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSetUpObstacles.Name = "btnSetUpObstacles";
-            this.btnSetUpObstacles.Size = new System.Drawing.Size(286, 33);
+            this.btnSetUpObstacles.Size = new System.Drawing.Size(381, 41);
             this.btnSetUpObstacles.TabIndex = 30;
             this.btnSetUpObstacles.Text = "Set Up Obstacles";
             this.btnSetUpObstacles.UseVisualStyleBackColor = true;
@@ -693,8 +759,8 @@
             // 
             // numudObstacles
             // 
-            this.numudObstacles.Location = new System.Drawing.Point(106, 63);
-            this.numudObstacles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numudObstacles.Location = new System.Drawing.Point(141, 78);
+            this.numudObstacles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numudObstacles.Maximum = new decimal(new int[] {
             5,
             0,
@@ -706,7 +772,7 @@
             0,
             0});
             this.numudObstacles.Name = "numudObstacles";
-            this.numudObstacles.Size = new System.Drawing.Size(227, 20);
+            this.numudObstacles.Size = new System.Drawing.Size(303, 22);
             this.numudObstacles.TabIndex = 11;
             this.numudObstacles.Value = new decimal(new int[] {
             1,
@@ -719,9 +785,10 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(3, 19);
+            this.label24.Location = new System.Drawing.Point(4, 23);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(376, 26);
+            this.label24.Size = new System.Drawing.Size(475, 32);
             this.label24.TabIndex = 29;
             this.label24.Text = "HOW MANY OBSTACLES (MAX: 5)";
             // 
@@ -732,20 +799,21 @@
             this.tabPlane.Controls.Add(this.tabPlaneSpecs);
             this.tabPlane.Controls.Add(this.tabSimulate);
             this.tabPlane.Controls.Add(this.tabPage5);
-            this.tabPlane.Location = new System.Drawing.Point(808, 0);
+            this.tabPlane.Location = new System.Drawing.Point(1077, 0);
+            this.tabPlane.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPlane.Name = "tabPlane";
             this.tabPlane.SelectedIndex = 0;
-            this.tabPlane.Size = new System.Drawing.Size(423, 826);
+            this.tabPlane.Size = new System.Drawing.Size(564, 1017);
             this.tabPlane.TabIndex = 6;
             this.tabPlane.SelectedIndexChanged += new System.EventHandler(this.tabPlane_SelectedIndexChanged);
             // 
             // picArmory
             // 
             this.picArmory.BackColor = System.Drawing.Color.Black;
-            this.picArmory.Location = new System.Drawing.Point(11, 303);
-            this.picArmory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picArmory.Location = new System.Drawing.Point(15, 373);
+            this.picArmory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picArmory.Name = "picArmory";
-            this.picArmory.Size = new System.Drawing.Size(40, 33);
+            this.picArmory.Size = new System.Drawing.Size(53, 41);
             this.picArmory.TabIndex = 11;
             this.picArmory.TabStop = false;
             this.picArmory.Visible = false;
@@ -754,10 +822,10 @@
             // picPostOffice
             // 
             this.picPostOffice.BackColor = System.Drawing.Color.Black;
-            this.picPostOffice.Location = new System.Drawing.Point(11, 177);
-            this.picPostOffice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picPostOffice.Location = new System.Drawing.Point(15, 218);
+            this.picPostOffice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picPostOffice.Name = "picPostOffice";
-            this.picPostOffice.Size = new System.Drawing.Size(22, 28);
+            this.picPostOffice.Size = new System.Drawing.Size(29, 34);
             this.picPostOffice.TabIndex = 14;
             this.picPostOffice.TabStop = false;
             this.picPostOffice.Visible = false;
@@ -766,10 +834,10 @@
             // picBarracks
             // 
             this.picBarracks.BackColor = System.Drawing.Color.Black;
-            this.picBarracks.Location = new System.Drawing.Point(24, 99);
-            this.picBarracks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBarracks.Location = new System.Drawing.Point(32, 122);
+            this.picBarracks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBarracks.Name = "picBarracks";
-            this.picBarracks.Size = new System.Drawing.Size(27, 21);
+            this.picBarracks.Size = new System.Drawing.Size(36, 26);
             this.picBarracks.TabIndex = 15;
             this.picBarracks.TabStop = false;
             this.picBarracks.Visible = false;
@@ -778,10 +846,10 @@
             // picOffice
             // 
             this.picOffice.BackColor = System.Drawing.Color.Black;
-            this.picOffice.Location = new System.Drawing.Point(11, 397);
-            this.picOffice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picOffice.Location = new System.Drawing.Point(15, 489);
+            this.picOffice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picOffice.Name = "picOffice";
-            this.picOffice.Size = new System.Drawing.Size(79, 15);
+            this.picOffice.Size = new System.Drawing.Size(105, 18);
             this.picOffice.TabIndex = 16;
             this.picOffice.TabStop = false;
             this.picOffice.Visible = false;
@@ -790,10 +858,10 @@
             // picHostpital
             // 
             this.picHostpital.BackColor = System.Drawing.Color.Black;
-            this.picHostpital.Location = new System.Drawing.Point(91, 153);
-            this.picHostpital.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picHostpital.Location = new System.Drawing.Point(121, 188);
+            this.picHostpital.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picHostpital.Name = "picHostpital";
-            this.picHostpital.Size = new System.Drawing.Size(19, 37);
+            this.picHostpital.Size = new System.Drawing.Size(25, 46);
             this.picHostpital.TabIndex = 17;
             this.picHostpital.TabStop = false;
             this.picHostpital.Visible = false;
@@ -802,10 +870,10 @@
             // picMessHall
             // 
             this.picMessHall.BackColor = System.Drawing.Color.Black;
-            this.picMessHall.Location = new System.Drawing.Point(77, 256);
-            this.picMessHall.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picMessHall.Location = new System.Drawing.Point(103, 315);
+            this.picMessHall.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picMessHall.Name = "picMessHall";
-            this.picMessHall.Size = new System.Drawing.Size(13, 12);
+            this.picMessHall.Size = new System.Drawing.Size(17, 15);
             this.picMessHall.TabIndex = 18;
             this.picMessHall.TabStop = false;
             this.picMessHall.Visible = false;
@@ -816,9 +884,10 @@
             this.lblBaracks.AutoSize = true;
             this.lblBaracks.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBaracks.ForeColor = System.Drawing.Color.Black;
-            this.lblBaracks.Location = new System.Drawing.Point(18, 85);
+            this.lblBaracks.Location = new System.Drawing.Point(24, 105);
+            this.lblBaracks.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBaracks.Name = "lblBaracks";
-            this.lblBaracks.Size = new System.Drawing.Size(56, 12);
+            this.lblBaracks.Size = new System.Drawing.Size(70, 16);
             this.lblBaracks.TabIndex = 31;
             this.lblBaracks.Text = "Barracks";
             this.lblBaracks.Visible = false;
@@ -828,9 +897,10 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(1, 209);
+            this.label20.Location = new System.Drawing.Point(1, 257);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(66, 12);
+            this.label20.Size = new System.Drawing.Size(83, 16);
             this.label20.TabIndex = 32;
             this.label20.Text = "Post Office";
             this.label20.Visible = false;
@@ -840,9 +910,10 @@
             this.lblQuarters.AutoSize = true;
             this.lblQuarters.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuarters.ForeColor = System.Drawing.Color.Black;
-            this.lblQuarters.Location = new System.Drawing.Point(12, 426);
+            this.lblQuarters.Location = new System.Drawing.Point(16, 524);
+            this.lblQuarters.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuarters.Name = "lblQuarters";
-            this.lblQuarters.Size = new System.Drawing.Size(92, 12);
+            this.lblQuarters.Size = new System.Drawing.Size(113, 16);
             this.lblQuarters.TabIndex = 33;
             this.lblQuarters.Text = "Office Quarters";
             this.lblQuarters.Visible = false;
@@ -852,9 +923,10 @@
             this.lblMessHall.AutoSize = true;
             this.lblMessHall.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessHall.ForeColor = System.Drawing.Color.Black;
-            this.lblMessHall.Location = new System.Drawing.Point(75, 270);
+            this.lblMessHall.Location = new System.Drawing.Point(100, 332);
+            this.lblMessHall.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMessHall.Name = "lblMessHall";
-            this.lblMessHall.Size = new System.Drawing.Size(57, 12);
+            this.lblMessHall.Size = new System.Drawing.Size(75, 16);
             this.lblMessHall.TabIndex = 34;
             this.lblMessHall.Text = "Mess Hall";
             this.lblMessHall.Visible = false;
@@ -864,9 +936,10 @@
             this.lblArmory.AutoSize = true;
             this.lblArmory.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArmory.ForeColor = System.Drawing.Color.Black;
-            this.lblArmory.Location = new System.Drawing.Point(12, 348);
+            this.lblArmory.Location = new System.Drawing.Point(16, 428);
+            this.lblArmory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblArmory.Name = "lblArmory";
-            this.lblArmory.Size = new System.Drawing.Size(46, 12);
+            this.lblArmory.Size = new System.Drawing.Size(58, 16);
             this.lblArmory.TabIndex = 35;
             this.lblArmory.Text = "Armory";
             this.lblArmory.Visible = false;
@@ -876,9 +949,10 @@
             this.lblHospital.AutoSize = true;
             this.lblHospital.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHospital.ForeColor = System.Drawing.Color.Black;
-            this.lblHospital.Location = new System.Drawing.Point(115, 177);
+            this.lblHospital.Location = new System.Drawing.Point(153, 218);
+            this.lblHospital.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHospital.Name = "lblHospital";
-            this.lblHospital.Size = new System.Drawing.Size(50, 12);
+            this.lblHospital.Size = new System.Drawing.Size(65, 16);
             this.lblHospital.TabIndex = 36;
             this.lblHospital.Text = "Hospital";
             this.lblHospital.Visible = false;
@@ -886,10 +960,10 @@
             // picObstacle1
             // 
             this.picObstacle1.BackColor = System.Drawing.Color.Red;
-            this.picObstacle1.Location = new System.Drawing.Point(180, 345);
-            this.picObstacle1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picObstacle1.Location = new System.Drawing.Point(240, 425);
+            this.picObstacle1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picObstacle1.Name = "picObstacle1";
-            this.picObstacle1.Size = new System.Drawing.Size(15, 15);
+            this.picObstacle1.Size = new System.Drawing.Size(20, 18);
             this.picObstacle1.TabIndex = 37;
             this.picObstacle1.TabStop = false;
             this.picObstacle1.Visible = false;
@@ -897,10 +971,10 @@
             // picObstacle4
             // 
             this.picObstacle4.BackColor = System.Drawing.Color.Red;
-            this.picObstacle4.Location = new System.Drawing.Point(452, 303);
-            this.picObstacle4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picObstacle4.Location = new System.Drawing.Point(603, 373);
+            this.picObstacle4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picObstacle4.Name = "picObstacle4";
-            this.picObstacle4.Size = new System.Drawing.Size(15, 15);
+            this.picObstacle4.Size = new System.Drawing.Size(20, 18);
             this.picObstacle4.TabIndex = 38;
             this.picObstacle4.TabStop = false;
             this.picObstacle4.Visible = false;
@@ -908,10 +982,10 @@
             // picObstacle3
             // 
             this.picObstacle3.BackColor = System.Drawing.Color.Red;
-            this.picObstacle3.Location = new System.Drawing.Point(362, 247);
-            this.picObstacle3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picObstacle3.Location = new System.Drawing.Point(483, 304);
+            this.picObstacle3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picObstacle3.Name = "picObstacle3";
-            this.picObstacle3.Size = new System.Drawing.Size(15, 15);
+            this.picObstacle3.Size = new System.Drawing.Size(20, 18);
             this.picObstacle3.TabIndex = 39;
             this.picObstacle3.TabStop = false;
             this.picObstacle3.Visible = false;
@@ -919,10 +993,10 @@
             // picObstacle2
             // 
             this.picObstacle2.BackColor = System.Drawing.Color.Red;
-            this.picObstacle2.Location = new System.Drawing.Point(362, 359);
-            this.picObstacle2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picObstacle2.Location = new System.Drawing.Point(483, 442);
+            this.picObstacle2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picObstacle2.Name = "picObstacle2";
-            this.picObstacle2.Size = new System.Drawing.Size(15, 15);
+            this.picObstacle2.Size = new System.Drawing.Size(20, 18);
             this.picObstacle2.TabIndex = 40;
             this.picObstacle2.TabStop = false;
             this.picObstacle2.Visible = false;
@@ -930,10 +1004,10 @@
             // picObstacle5
             // 
             this.picObstacle5.BackColor = System.Drawing.Color.Red;
-            this.picObstacle5.Location = new System.Drawing.Point(529, 224);
-            this.picObstacle5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picObstacle5.Location = new System.Drawing.Point(705, 276);
+            this.picObstacle5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picObstacle5.Name = "picObstacle5";
-            this.picObstacle5.Size = new System.Drawing.Size(15, 15);
+            this.picObstacle5.Size = new System.Drawing.Size(20, 18);
             this.picObstacle5.TabIndex = 41;
             this.picObstacle5.TabStop = false;
             this.picObstacle5.Visible = false;
@@ -941,10 +1015,10 @@
             // picShoot1
             // 
             this.picShoot1.BackColor = System.Drawing.Color.Gold;
-            this.picShoot1.Location = new System.Drawing.Point(182, 337);
-            this.picShoot1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picShoot1.Location = new System.Drawing.Point(243, 415);
+            this.picShoot1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picShoot1.Name = "picShoot1";
-            this.picShoot1.Size = new System.Drawing.Size(8, 11);
+            this.picShoot1.Size = new System.Drawing.Size(11, 14);
             this.picShoot1.TabIndex = 42;
             this.picShoot1.TabStop = false;
             this.picShoot1.Visible = false;
@@ -952,10 +1026,10 @@
             // picShoot4
             // 
             this.picShoot4.BackColor = System.Drawing.Color.Gold;
-            this.picShoot4.Location = new System.Drawing.Point(527, 288);
-            this.picShoot4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picShoot4.Location = new System.Drawing.Point(703, 354);
+            this.picShoot4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picShoot4.Name = "picShoot4";
-            this.picShoot4.Size = new System.Drawing.Size(8, 11);
+            this.picShoot4.Size = new System.Drawing.Size(11, 14);
             this.picShoot4.TabIndex = 43;
             this.picShoot4.TabStop = false;
             this.picShoot4.Visible = false;
@@ -963,10 +1037,10 @@
             // picShoot3
             // 
             this.picShoot3.BackColor = System.Drawing.Color.Gold;
-            this.picShoot3.Location = new System.Drawing.Point(533, 295);
-            this.picShoot3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picShoot3.Location = new System.Drawing.Point(711, 363);
+            this.picShoot3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picShoot3.Name = "picShoot3";
-            this.picShoot3.Size = new System.Drawing.Size(8, 11);
+            this.picShoot3.Size = new System.Drawing.Size(11, 14);
             this.picShoot3.TabIndex = 44;
             this.picShoot3.TabStop = false;
             this.picShoot3.Visible = false;
@@ -974,10 +1048,10 @@
             // picShoot2
             // 
             this.picShoot2.BackColor = System.Drawing.Color.Gold;
-            this.picShoot2.Location = new System.Drawing.Point(362, 349);
-            this.picShoot2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picShoot2.Location = new System.Drawing.Point(483, 430);
+            this.picShoot2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picShoot2.Name = "picShoot2";
-            this.picShoot2.Size = new System.Drawing.Size(8, 11);
+            this.picShoot2.Size = new System.Drawing.Size(11, 14);
             this.picShoot2.TabIndex = 45;
             this.picShoot2.TabStop = false;
             this.picShoot2.Visible = false;
@@ -985,10 +1059,10 @@
             // picShoot5
             // 
             this.picShoot5.BackColor = System.Drawing.Color.Gold;
-            this.picShoot5.Location = new System.Drawing.Point(533, 209);
-            this.picShoot5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picShoot5.Location = new System.Drawing.Point(711, 257);
+            this.picShoot5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picShoot5.Name = "picShoot5";
-            this.picShoot5.Size = new System.Drawing.Size(8, 11);
+            this.picShoot5.Size = new System.Drawing.Size(11, 14);
             this.picShoot5.TabIndex = 46;
             this.picShoot5.TabStop = false;
             this.picShoot5.Visible = false;
@@ -1002,10 +1076,9 @@
             this.lblGameOver.AutoSize = true;
             this.lblGameOver.BackColor = System.Drawing.Color.Red;
             this.lblGameOver.Font = new System.Drawing.Font("Arial Rounded MT Bold", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGameOver.Location = new System.Drawing.Point(527, 100);
-            this.lblGameOver.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGameOver.Location = new System.Drawing.Point(703, 123);
             this.lblGameOver.Name = "lblGameOver";
-            this.lblGameOver.Size = new System.Drawing.Size(208, 34);
+            this.lblGameOver.Size = new System.Drawing.Size(265, 44);
             this.lblGameOver.TabIndex = 48;
             this.lblGameOver.Text = "lblGameOver";
             this.lblGameOver.Visible = false;
@@ -1014,54 +1087,18 @@
             // 
             this.lblTimeBegun.AutoSize = true;
             this.lblTimeBegun.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeBegun.Location = new System.Drawing.Point(219, 28);
-            this.lblTimeBegun.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTimeBegun.Location = new System.Drawing.Point(292, 34);
             this.lblTimeBegun.Name = "lblTimeBegun";
-            this.lblTimeBegun.Size = new System.Drawing.Size(0, 17);
+            this.lblTimeBegun.Size = new System.Drawing.Size(0, 22);
             this.lblTimeBegun.TabIndex = 49;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(62, 357);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(286, 33);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "<<";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(2, 282);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(188, 44);
-            this.btnBack.TabIndex = 14;
-            this.btnBack.Text = "<<";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // btnGoBack
-            // 
-            this.btnGoBack.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoBack.Location = new System.Drawing.Point(17, 90);
-            this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(155, 46);
-            this.btnGoBack.TabIndex = 32;
-            this.btnGoBack.Text = "<<";
-            this.btnGoBack.UseVisualStyleBackColor = true;
-            this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
             // 
             // Main_Simulator_
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FlightSimulator.Properties.Resources.political_map_of_jutai_physical_outside;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1229, 468);
+            this.ClientSize = new System.Drawing.Size(1639, 576);
             this.Controls.Add(this.lblTimeBegun);
             this.Controls.Add(this.lblGameOver);
             this.Controls.Add(this.picShoot5);
@@ -1091,6 +1128,7 @@
             this.Controls.Add(this.Location2);
             this.Controls.Add(this.lblPlaneShow);
             this.Controls.Add(this.picPlaneMap);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Main_Simulator_";
             this.Text = "Main_Simulator_";
             this.Load += new System.EventHandler(this.Main_Simulator__Load);

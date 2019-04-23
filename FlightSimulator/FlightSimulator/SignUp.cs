@@ -29,7 +29,7 @@ namespace FlightSimulator
             rank = txtPosition.Text;
             password = txtPassword.Text;
 
-            Users users = new Users(name, password, id, rank, surname, age);
+            Users users = new Users(name, password);
             Authentiction_Handler handler = new Authentiction_Handler();
             handler.WriteUsers(users, path);
 

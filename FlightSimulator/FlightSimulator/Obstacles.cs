@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FlightSimulator
 {
-    class Obstacles : Jets
+    class Obstacles
     {
         private int obstacleID;
 
@@ -16,28 +16,36 @@ namespace FlightSimulator
             set { obstacleID = value; }
         }
 
-        private double obstacleShootAltitude;
+        private int coordinatesY;
 
-        public double ObstacleShootAltitude
+        public int CoordinatesY
         {
-            get { return obstacleShootAltitude; }
-            set { obstacleShootAltitude = value; }
-        }
-
-        private bool obstacleAvoided;
-
-        public bool ObstacleAvoided
-        {
-            get { return obstacleAvoided; }
-            set { obstacleAvoided = value; }
+            get { return coordinatesY; }
+            set { coordinatesY = value; }
         }
 
 
-        public Obstacles(int jetid, string jetname, double jetfuel, double jetspeed, double jetweight, double jetaltitude, int obstacleid, double obstacleshootaltitude, bool obstacleavoided) : base(jetid, jetname, jetfuel, jetspeed, jetweight, jetaltitude)
+        private int coordinatesX;
+
+        public int CoordinatesX
         {
-            this.obstacleID = obstacleid;
-            this.obstacleShootAltitude = obstacleshootaltitude;
-            this.obstacleAvoided = obstacleavoided;
+            get { return coordinatesX; }
+            set { coordinatesX = value; }
         }
+
+
+        public Obstacles(int coordinatesY, int coordinatesX)
+        {
+            this.coordinatesX = coordinatesX;
+            this.coordinatesY = coordinatesY;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{0},{1}", coordinatesY, coordinatesX);
+        }
+
+        
+
     }
 }

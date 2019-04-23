@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentiction Handler.cs" />
+    <Compile Include="CustomExeption.cs" />
     <Compile Include="DataHandler.cs" />
     <Compile Include="forgotton Password.cs">
       <SubType>Form</SubType>

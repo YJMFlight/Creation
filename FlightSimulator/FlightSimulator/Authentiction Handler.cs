@@ -19,7 +19,7 @@ namespace FlightSimulator
             while (line != null)
             {
                 string[] list = line.Split(',');
-                users.Add(new Users(list[1], list[5], list[0], list[4], list[2], list[3]));
+                users.Add(new Users(list[0], list[1]));
                 line = reader.ReadLine();
             }
             return users;
@@ -30,7 +30,7 @@ namespace FlightSimulator
         {
             FileStream file = new FileStream(path, FileMode.Append, FileAccess.Write);
             StreamWriter writer = new StreamWriter(file);
-            writer.WriteLine("{0},{1},{2},{3},{4},{5}", users.Id, users.UserName, users.Surname, users.Age, users.Rank, users.Password);
+            writer.WriteLine("{0},{1}",  users.UserName, users.Password);
             writer.Close();
             file.Close();
         }
