@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestLogin));
             this.btnEnter = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -40,10 +41,9 @@
             // btnEnter
             // 
             this.btnEnter.ForeColor = System.Drawing.Color.Black;
-            this.btnEnter.Location = new System.Drawing.Point(240, 336);
-            this.btnEnter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEnter.Location = new System.Drawing.Point(180, 273);
             this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(305, 28);
+            this.btnEnter.Size = new System.Drawing.Size(229, 23);
             this.btnEnter.TabIndex = 24;
             this.btnEnter.Text = "Enter...";
             this.btnEnter.UseVisualStyleBackColor = true;
@@ -51,55 +51,49 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(377, 272);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Location = new System.Drawing.Point(283, 221);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(144, 22);
+            this.txtPassword.Size = new System.Drawing.Size(109, 20);
             this.txtPassword.TabIndex = 22;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(377, 218);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Location = new System.Drawing.Point(283, 177);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(144, 22);
+            this.txtUsername.Size = new System.Drawing.Size(109, 20);
             this.txtUsername.TabIndex = 21;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(236, 276);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(177, 224);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 17);
+            this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 20;
             this.label3.Text = "Password :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(236, 218);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(177, 177);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 17);
+            this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 19;
             this.label2.Text = "Username : ";
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(3, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(2, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(808, 123);
+            this.panel1.Size = new System.Drawing.Size(606, 100);
             this.panel1.TabIndex = 18;
             // 
             // btnBack
             // 
             this.btnBack.ForeColor = System.Drawing.Color.Black;
-            this.btnBack.Location = new System.Drawing.Point(240, 372);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Location = new System.Drawing.Point(180, 302);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(305, 28);
+            this.btnBack.Size = new System.Drawing.Size(229, 23);
             this.btnBack.TabIndex = 25;
             this.btnBack.Text = "Back...";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -107,10 +101,11 @@
             // 
             // TestLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(821, 554);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(616, 450);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.txtPassword);
@@ -119,7 +114,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TestLogin";
             this.Text = "TestLogin";
             this.Load += new System.EventHandler(this.TestLogin_Load);

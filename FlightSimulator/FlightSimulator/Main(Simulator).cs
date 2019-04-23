@@ -420,9 +420,11 @@ namespace FlightSimulator
                 this.lblTimeBegun.Text = IncreasingTimeMinutes.ToString() + ":" + IncreasingSeconds.ToString();
             }
         }
-
+        
+        
         private void button3_Click_1(object sender, EventArgs e)
         {
+            
             Thread increasingTime = new Thread(delegate()
             {
                 while (picPlaneMap.Location.X < 780)
@@ -457,7 +459,7 @@ namespace FlightSimulator
                 if (FuelDown == 0)
                 {
                     MessageBox.Show("You have failed! Fuel tank depleted!");
-                    lstDescription.Items.Add("Success Rating: " + (100 - pBarEnemy.Value) + "%");
+                  //  lstDescription.Items.Add("Success Rating: " + (100 - pBarEnemy.Value) + "%");
                     
                 }
 
@@ -577,7 +579,7 @@ namespace FlightSimulator
             {
 
                 this.picShoot2.Location = new Point(Co_OrdinatesShoot[2], ShootYTwo);
-                if (picShoot2.Location.X == picPlaneMap.Location.X)
+                if (picShoot2.Location.Y == picPlaneMap.Location.Y && picShoot2.Location.X == picPlaneMap.Location.X)
                 {
                     pBarLifePlane.Value = pBarLifePlane.Value - 10;
                 }
@@ -596,7 +598,7 @@ namespace FlightSimulator
             {
 
                 this.picShoot3.Location = new Point(Co_OrdinatesShoot[4], ShootYThree);
-                if (picShoot3.Location.X == picPlaneMap.Location.X)
+                if (picShoot3.Location.Y == picPlaneMap.Location.Y && picShoot3.Location.X == picPlaneMap.Location.X)
                 {
                     pBarLifePlane.Value = pBarLifePlane.Value - 10;
                 }
@@ -832,6 +834,26 @@ namespace FlightSimulator
             tabPlane.SelectedTab = tabSimulate;
         }
 
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            tabPlane.SelectedTab = tabObstacles;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            tabPlane.SelectedTab = tabObstacles;
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            tabPlane.SelectedTab = tabInventoryCheck;
+        }
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            tabPlane.SelectedTab = tabPlaneSpecs;
+        }
+
         private void timePlaneMoving_Tick(object sender, EventArgs e)
         {
             
@@ -862,7 +884,7 @@ namespace FlightSimulator
             {
 
                 this.picShoot4.Location = new Point(Co_OrdinatesShoot[6], ShootYFour);
-                if (picShoot4.Location.X == picPlaneMap.Location.X)
+                if (picShoot4.Location.Y == picPlaneMap.Location.Y && picShoot4.Location.X == picPlaneMap.Location.X)
                 {
                     pBarLifePlane.Value = pBarLifePlane.Value - 10;
                 }
@@ -881,7 +903,7 @@ namespace FlightSimulator
             {
 
                 this.picShoot5.Location = new Point(Co_OrdinatesShoot[8], ShootYFive);
-                if (picShoot5.Location.Y == picPlaneMap.Location.Y)
+                if (picShoot5.Location.Y == picPlaneMap.Location.Y && picShoot5.Location.X == picPlaneMap.Location.X)
                 {
                     pBarLifePlane.Value = pBarLifePlane.Value - 10;
                 }
